@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+        integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.coam/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+
+</head>
+<body>
+    <div class="loader_container" id="loader">
+        <div class="spinnerContainer">
+            <div class="spinner"></div>
+            <div class="loader">
+              <p>Loading</p>
+              <div class="words">
+                <span class="word">schedules</span>
+                <span class="word">collections</span>
+                <span class="word">recycling data</span>
+                <span class="word">environmental impact</span>
+                <span class="word">notifications</span>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    <div class="content">
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><h1>Smart<span>pro</span></h1></a>
+                </div>
+                <div class="navlinks">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Services <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="dropdown slide-top">
+                                <li><a href="/nav/services/smartwm.html"><i class="ri-recycle-line"></i> Smart waste management</a></li>
+                                <li><a href="/nav/services/wastepickup.html"><i class="ri-truck-line"></i> Waste pickup</a></li>
+                            </ul>
+                        </li>
+                       
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav_buttons">
+                    <button>Login</button>
+                    <button>Sign up</button>
+                  
+                </div>
+            </div>
+            <i class="ri-menu-3-line" id="mobile_menu"></i>
+        </header>
+       
+        <div class="mobile_nav_menu slide-left">
+            <i class="ri-close-line" id="mobile_menu_close"></i> <!-- Icon to close mobile menu -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Services <i class="ri-arrow-down-s-line"></i></a>
+                    <ul class="dropdown slide-top">
+                        <li><a href="/nav/services/smartwm.html"><i class="ri-recycle-line"></i> Smart waste management</a></li>
+                        <li><a href="#"><i class="ri-truck-line"></i> Waste pickup</a></li>
+                    </ul>
+                </li>
+               
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="mobile_nav_buttons">
+                <button>Login</button>
+                <button>Sign up</button>
+              
+            </div>
+        </div>
+        <div class="waste-hero">
+            <div class="waste-overlay"></div>
+            <div class="container">
+                <div class="waste-text-container">
+                    <h1>Efficient & Sustainable Waste Management Solutions</h1>
+                    <a href="#" class="waste-register-button">
+                        Register 
+                        <lord-icon
+                            src="https://cdn.lordicon.com/vduvxizq.json"
+                            trigger="loop"
+                            delay="2000"
+                            colors="primary:#3B945E"
+                            style="width:16px;height:16px;padding-top:3px;">
+                        </lord-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="feature_container">
+            <div id="features" class="features">
+                <div class="box foo">
+                    <h3 class="features-title">Features</h3>
+                    <div class="features-content">
+                        <div data-features-tabs class="features-content-col">
+                            <div id="feature-1" class="features-textblock animated fadeIn __active">
+                                <h2>Real-time Monitoring</h2>
+                                <p>Track waste levels and collection activities in real-time using sensors and IoT devices.</p>
+                                <ul>
+                                    <li>Receive instant alerts for bin status and route optimization.</li>
+                                    <li>Reduce operational costs and improve efficiency.</li>
+                                    <li>Ensure timely waste collection and disposal.</li>
+                                </ul>
+                            </div>
+                            <div id="feature-2" class="features-textblock animated fadeIn">
+                                <h2>Automated Sorting</h2>
+                                <p>Automatically sort recyclable and non-recyclable waste using AI-powered sorting systems.</p>
+                                <ul>
+                                    <li>Enhance recycling rates and reduce contamination.</li>
+                                    <li>Optimize waste sorting processes and minimize manual labor.</li>
+                                    <li>Improve waste recovery and resource utilization.</li>
+                                </ul>
+                            </div>
+                            <div id="feature-3" class="features-textblock animated fadeIn">
+                                <h2>Data Analytics</h2>
+                                <p>Gain insights into waste generation patterns, trends, and performance metrics.</p>
+
+                                <ul>
+                                    <li>Visualize waste data for informed decision-making.</li>
+                                    <li>Identify areas for improvement and optimization.</li>
+                                    <li>Generate comprehensive reports for stakeholders.</li>
+                                </ul>
+                            </div>
+                            <div id="feature-4" class="features-textblock animated fadeIn">
+                                <h2>Smart Bin Management</h2>
+                                <p>Optimize waste collection routes and schedules based on fill levels and demand.</p>
+                                <ul>
+                                    <li>Reduce fuel consumption and carbon emissions.</li>
+                                    <li>Minimize overflowing bins and littering.</li>
+                                    <li>Improve overall cleanliness and sanitation.</li>
+                                </ul>
+                            </div>
+                            <div id="feature-5" class="features-textblock animated fadeIn">
+                                <h2>Environmental Impact</h2>
+                                <p>Contribute to a cleaner environment and sustainable waste management practices.</p>
+
+                                <ul>
+                                    <li>Reduce landfill waste and promote recycling efforts.</li>
+                                    <li>Measure and track environmental benefits and carbon footprint reduction.</li>
+                                    <li>Create a healthier and more livable community.</li>
+                                </ul>
+                            </div>
+                            <div id="feature-6" class="features-textblock animated fadeIn">
+                                <h2>FEATURE 6</h2>
+                              <p>Coming soon!!!</p>
+                               
+                            </div>
+                        </div>
+                        <div class="features-content-col">
+                            <div data-features-nav class="features-graph">
+                                <div class="button-holder"><a href="#feature-1" class="icon-features-1 btn-with-icon __active"><span class="sq-bt-label label-top-left">RT Monitoring</span></a>
+                                    <a href="#feature-2" class="icon-features-2 btn-with-icon"><span class="sq-bt-label label-top">Auto sorting</span></a>
+                                    <a href="#feature-3" class="icon-features-3 btn-with-icon"><span class="sq-bt-label label-top-right">Data Analysis</span></a></div>
+                                <div class="animation-holder">
+                                    <span class="flash-oval">
+                                   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/598117/flash.png" alt="pulse">
+                                   <div class="wave hidden wave-anim"></div>
+                                   <div class="wave2 hidden wave-anim"></div>
+                                   <div class="wave3 hidden wave-anim"></div>
+                                   <div class="wave4 hidden wave-anim"></div>
+                                </span>
+                                </div>
+                                <div class="button-holder">
+                                    <a href="#feature-4" class="icon-features-4 btn-with-icon">
+                                        <span class="sq-bt-label label-bottom-left">SB management</span></a>
+                                        <a href="#feature-5" class="icon-features-5 btn-with-icon"><span class="sq-bt-label label-bottom">Env Impact</span></a>
+                                        <a href="#feature-6" class="icon-features-6 btn-with-icon"><span class="sq-bt-label label-bottom-right">FEATURES 6</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="how_it">
+            <h2 class="title">How it works</h2>
+            <div class="pset">
+                <div class="container">
+                    <div class="row listar-feature-items">
+        
+                        <!-- Feature 1: Monitor Bins -->
+                        <div class="col-xs-12 col-sm-6 col-md-4 listar-feature-item-wrapper listar-feature-with-image listar-height-changed" data-aos="fade-zoom-in" data-aos-group="features" data-line-height="25.2px">
+                            <div class="listar-feature-item listar-feature-has-link">
+                                <a href="#monitor-bins"></a>
+                                <div class="listar-feature-item-inner">
+                                    <div class="listar-feature-right-border"></div>
+                                    <div class="listar-feature-block-content-wrapper">
+                                        <div class="listar-feature-icon-wrapper">
+                                            <div class="listar-feature-icon-inner">
+                                                <div>
+                                                    <img alt="Monitor Bins" class="listar-image-icon" src="https://cdn-icons-png.flaticon.com/128/1691/1691890.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="listar-feature-content-wrapper" style="padding-top: 0px;">
+                                            <div class="listar-feature-item-title listar-feature-counter-added">
+                                                <span><span>01</span>
+                                                    Monitor Bins</span>
+                                            </div>
+                                            <div class="listar-feature-item-excerpt">
+                                                Track waste bins in real-time to optimize collection schedules and routes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="listar-feature-fix-bottom-padding listar-fix-feature-arrow-button-height"></div>
+                        </div>
+        
+                        <!-- Feature 2: Analyze Data -->
+                        <div class="col-xs-12 col-sm-6 col-md-4 listar-feature-item-wrapper listar-feature-with-image listar-height-changed" data-aos="fade-zoom-in" data-aos-group="features" data-line-height="25.2px">
+                            <div class="listar-feature-item listar-feature-has-link">
+                                <a href="#analyze-data"></a>
+                                <div class="listar-feature-item-inner">
+                                    <div class="listar-feature-right-border"></div>
+                                    <div class="listar-feature-block-content-wrapper">
+                                        <div class="listar-feature-icon-wrapper">
+                                            <div class="listar-feature-icon-inner">
+                                                <div>
+                                                    <img alt="Analyze Data" class="listar-image-icon" src="https://cdn-icons-png.flaticon.com/128/2111/2111250.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="listar-feature-content-wrapper" style="padding-top: 0px;">
+                                            <div class="listar-feature-item-title listar-feature-counter-added">
+                                                <span><span>02</span>
+                                                    Analyze Data</span>
+                                            </div>
+                                            <div class="listar-feature-item-excerpt">
+                                                Utilize collected data for insightful analysis to optimize waste management strategies.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="listar-feature-fix-bottom-padding listar-fix-feature-arrow-button-height"></div>
+                        </div>
+        
+                        <!-- Feature 3: Reduce Costs -->
+                        <div class="col-xs-12 col-sm-6 col-md-4 listar-feature-item-wrapper listar-feature-with-image listar-height-changed" data-aos="fade-zoom-in" data-aos-group="features" data-line-height="25.2px">
+                            <div class="listar-feature-item listar-feature-has-link">
+                                <a href="#reduce-costs"></a>
+                                <div class="listar-feature-item-inner">
+                                    <div class="listar-feature-right-border"></div>
+                                    <div class="listar-feature-block-content-wrapper">
+                                        <div class="listar-feature-icon-wrapper">
+                                            <div class="listar-feature-icon-inner">
+                                                <div>
+                                                    <img alt="Reduce Costs" class="listar-image-icon" src="https://cdn-icons-png.flaticon.com/128/1371/1371107.png">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="listar-feature-content-wrapper" style="padding-top: 0px;">
+                                            <div class="listar-feature-item-title listar-feature-counter-added">
+                                                <span><span>03</span>
+                                                    Reduce Costs</span>
+                                            </div>
+                                            <div class="listar-feature-item-excerpt">
+                                                Optimize waste management processes to minimize operational expenses.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="listar-feature-fix-bottom-padding listar-fix-feature-arrow-button-height"></div>
+                        </div>
+                        <div class="otherbtns">
+                            <button>Request Demo</button>
+                            <button class="reg">Register</button>
+                        </div>
+                       
+                    </div>
+                </div>
+                
+            </div>
+           
+        </div>
+        
+
+        
+        <div class="faqs">
+            <div class="container">
+                <h2 class="section-title center-title">Frequently Asked Questions</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button id="accordion-button-1" aria-expanded="false">
+                            <span class="accordion-title">How do I schedule a waste collection?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>To schedule a waste collection, log into your account, navigate to the 'Schedule Collection' section, and select your preferred date and time. Make sure your bin is placed at the designated pickup spot.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-2" aria-expanded="false">
+                            <span class="accordion-title">What types of waste can be recycled?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Our system allows for the recycling of paper, plastic, glass, and metal. Ensure that these items are clean and dry before placing them in the recycling bin. Check our detailed recycling guide for more information.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-3" aria-expanded="false">
+                            <span class="accordion-title">How can I report a missed collection?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>If your waste was not collected as scheduled, please report it through the 'Report Issue' section of your account. Provide details about the missed collection, and our team will address it as soon as possible.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-4" aria-expanded="false">
+                            <span class="accordion-title">What is the environmental impact of using this system?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Our Smart Waste Management System helps reduce landfill waste, increases recycling rates, and lowers carbon emissions by optimizing collection routes and schedules. Your participation contributes significantly to a cleaner environment.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button id="accordion-button-5" aria-expanded="false">
+                            <span class="accordion-title">How can I track my waste management activities?</span>
+                            <span class="icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>You can track your waste management activities through your account dashboard. It provides detailed reports on your scheduled collections, recycling contributions, and environmental impact.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="membership">
+            <div class="container">
+                <div class="member_text">
+                    <h1>Not a member yet?</h1>
+                    <p>Join our Smart Waste Management System today! Members can enjoy benefits such as personalized collection schedules, real-time notifications, and access to detailed waste management reports.</p>
+                </div>
+                <div class="nav_button">
+                    <button>Login <i class="ri-arrow-right-up-line"></i></button>
+                    <button class="reg">Register <i class="ri-arrow-right-up-line"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="new_footer_area bg_color">
+            <div class="new_footer_top">
+                <div class="container">
+                    <div class="row">
+                        <!-- Contact Information -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                                <p>Stay updated with our latest news and updates on waste management.</p>
+                                <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                                    <input type="text" name="EMAIL" class="form-control memail" placeholder="Email">
+                                    <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                                    <p class="mchimp-errmessage" style="display: none;"></p>
+                                    <p class="mchimp-sucmessage" style="display: none;"></p>
+                                </form>
+                            </div>
+                        </div>
+        
+                        <!-- Quick Links -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Quick Links</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="#"><i class="fa-solid fa-home"></i> Home</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-recycle"></i> Waste Collection</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-map"></i> Service Areas</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-info-circle"></i> About Us</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!-- Services -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Services</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="#"><i class="fa-solid fa-trash"></i> Residential Waste</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-building"></i> Commercial Waste</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-recycle"></i> Recycling</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-truck"></i> Waste Collection</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-industry"></i> Industrial Waste</a></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!-- Help -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="#"><i class="fa-solid fa-question-circle"></i> FAQ</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-file-contract"></i> Terms &amp; Conditions</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-flag"></i> Reporting</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-file-alt"></i> Documentation</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-shield-alt"></i> Support Policy</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-user-secret"></i> Privacy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+        
+                        <!-- Language -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Language</h3>
+                                <div class="select_language">
+                                    <select id="language_select">
+                                        <option value="en">English</option>
+                                        <option value="fr">French</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Social Media -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                                <h3 class="f-title f_600 t_color f_size_18">Connect with Us</h3>
+                                <div class="f_social_icon">
+                                    <a href="#" class="fab fa-facebook"></a>
+                                    <a href="#" class="fab fa-twitter"></a>
+                                    <a href="#" class="fab fa-linkedin"></a>
+                                    <a href="#" class="fab fa-youtube"></a>
+                                    <a href="#" class="fab fa-whatsapp"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-7">
+                            <p class="mb-0 f_400">&copy; Smart Waste Management System. 2025 All rights reserved.</p>
+                        </div>
+                        <div class="col-lg-6 col-sm-5 text-right">
+                            <p>Powered by <i class="icon_heart"></i><a href="#" target="_blank"> Smartpro</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<script src="/js/index.js"></script>
+<script src="/css/c"></script>
+<script src="/js/jquery.js"></script>
+<script src="owl.js"></script>
+
+</body>
+
+</html>
