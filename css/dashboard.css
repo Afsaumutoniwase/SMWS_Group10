@@ -331,10 +331,10 @@
     border-radius: 100%;
   }
   .c-header-icon:hover svg {
-    color: #f5642d;
+    color: var(--primary-color);
   }
   .c-header-icon:hover [class*=bar-] {
-    background: #f5642d;
+    background: var(--primary-color);
   }
   
   .l-header {
@@ -619,7 +619,6 @@
   main.l-main .content-wrapper--with-bg .page-content {
     background: #fff;
     border-radius: 3px;
-    border: 1px solid #d0d0d0;
     padding: 25px;
   }
   main.l-main .page-title {
@@ -629,4 +628,37 @@
   }
   .sidebar-is-expanded main.l-main {
     padding-left: 220px;
+  }
+
+  .page-content .column_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .page-content .column_container .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  
+  }
+  .column_container .row h2 {
+    color: var(--primary-color);
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  .column_container .row p {
+    font-size: 1em;
+    font-weight: 400;
+   
+  }
+  .column_container .row p.active_date {
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+  .timeline p {
+    cursor: pointer;
+  }
+  .timeline p:hover {
+    color: var(--sub-primary);
   }
