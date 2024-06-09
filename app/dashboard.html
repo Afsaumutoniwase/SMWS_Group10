@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+  
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+        integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.coam/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+
+</head>
+<body>
+    <div class="loader_container" id="loader">
+        <div class="spinnerContainer">
+            <div class="spinner"></div>
+            <div class="loader">
+              <p>Loading</p>
+              <div class="words">
+                <span class="word">schedules</span>
+                <span class="word">collections</span>
+                <span class="word">recycling data</span>
+                <span class="word">environmental impact</span>
+                <span class="word">notifications</span>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    <div class="content">
+       
+      
+    <div class="sidebar-is-reduced">
+    <header class="l-header">
+      <div class="l-header__inner clearfix">
+        <div class="c-header-icon js-hamburger">
+          <div class="hamburger-toggle"><span class="bar-top"></span><span class="bar-mid"></span><span class="bar-bot"></span></div>
+        </div>
+        <div class="c-header-icon has-dropdown"><span class="c-badge c-badge--red c-badge--header-icon animated swing">13</span><i class="fa fa-bell"></i>
+          <div class="c-dropdown c-dropdown--notifications">
+            <div class="c-dropdown__header"></div>
+            <div class="c-dropdown__content"></div>
+          </div>
+        </div>
+        <div class="c-search">
+          <input class="c-search__input u-input" placeholder="Search..." type="text"/>
+          
+        </div>
+        <div class="header-icons-group">
+          <div class="c-header-icon basket"><span class="c-badge c-badge--blue c-badge--header-icon animated swing">4</span> <i class="fa fa-user-circle"></i></div>
+          <div class="c-header-icon logout"><i class="ri-logout-circle-r-line"></i></div>
+        </div>
+      </div>
+    </header><div class="l-sidebar">
+        <div class="logo">
+            <div class="logo__txt">Smartpro</div>
+        </div>
+        <div class="l-sidebar__content">
+            <nav class="c-menu js-menu">
+                <ul class="u-list">
+                    <!-- Dashboard -->
+                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Dashboard">
+                        <div class="c-menu__item__inner">
+                            <i class="ri-dashboard-fill"></i>
+                            <div class="c-menu-item__title"><span>Dashboard</span></div>
+                        </div>
+                    </li>
+                    <!-- Waste Collection Schedule -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="Waste Collection Schedule">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-calendar-alt"></i>
+                            <div class="c-menu-item__title"><span>Waste Collection Schedule</span></div>
+                        </div>
+                    </li>
+                    <!-- Recycling Tracker -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="Recycling Tracker">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-recycle"></i>
+                            <div class="c-menu-item__title"><span>Recycling Tracker</span></div>
+                        </div>
+                    </li>
+                    <!-- Notifications -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="Notifications">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-bell"></i>
+                            <div class="c-menu-item__title"><span>Notifications</span></div>
+                        </div>
+                    </li>
+                    <!-- User Settings -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="User Settings">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-user-cog"></i>
+                            <div class="c-menu-item__title"><span>User Settings</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+  </div>
+  <main class="l-main">
+    <div class="content-wrapper content-wrapper--with-bg">
+      <h1 class="page-title">Dashboard</h1>
+      <div class="page-content">Content goes here</div>
+    </div>
+  </main>
+
+        
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/dashboard.js"></script>
+
+</body>
+
+</html>
