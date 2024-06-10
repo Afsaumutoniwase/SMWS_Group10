@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+   
 
 </head>
 <body>
@@ -106,46 +107,202 @@
   </div>
   <main class="l-main">
     <div class="content-wrapper content-wrapper--with-bg">
-      <h1 class="page-title">Your waste and recycling at your convenience!</h1>
+      <h1 class="page-title">Hello,</h1>
+      <h1 class="name">Simeon Azeh</h1>
       <div class="page-content">
         <div class="column_container">
-            <div class="row">
-                <div class="info">
-                    <h2>72%</h2>
-                    <p>Average fill level</p>
-                </div>
-                <div class="info">
-                    <h2>7</h2>
-                    <p>Ready for pickup</p>
-                </div>
-                <div class="info">
-                    <h2>131</h2>
-                    <p>Total waste</p>
-                </div>
+          <div class="row">
+            <div class="info">
+              <h2>72%</h2>
+              <p>Average fill level</p>
             </div>
-            <div class="row timeline">
-                <p>3 days</p>
-                <p class="active_date">7 days</p>
-                <p>2 weeks</p>
-                <p>1 month</p>
-                <p>All time</p>
+            <div class="info">
+              <h2>7</h2>
+              <p>Ready for pickup</p>
             </div>
+            <div class="info">
+              <h2>131</h2>
+              <p>Bins total</p>
+            </div>
+          </div>
+          <div class="row timeline">
+            <p>3 days</p>
+            <p class="active_date">7 days</p>
+            <p>2 weeks</p>
+            <p>1 month</p>
+            <p>All time</p>
+          </div>
         </div>
-       
+        <div class="graph_dis">
+            <canvas id="fillLevelChart" style="width: 450px; height: 100px;"></canvas>
+          </div>
+          <div class="column_container2">
+            <div class="row2">
+                <h1><i class="ri-focus-fill"></i> Bins Near you</h1>
+                <h2 class="available">7+ <span>Available</span></h2>
+                <div class="container_2">
+                    <div class="skill-box">
+                        <div class="quick_actions">
+                            <span class="title">Location 1</span>
+                            <div class="action_btns">
+                                <i class="ri-compass-line">
+                                    <span class="tooltiptext">Get Directions</span>
+                                </i>
+                                <i class="ri-customer-service-fill">
+                                    <span class="tooltiptext">Report Issue</span>
+                                </i>
+                                <i class="ri-truck-line">
+                                    <span class="tooltiptext">Request Pickup</span>
+                                </i>
+                                <i class="ri-star-line">
+                                    <span class="tooltiptext">Mark as Favorite</span>
+                                </i>
+                            </div>
+                        </div>
+                     
+                  
+                      <div class="skill-bar">
+                        <span class="skill-per html">
+                          <span class="toolti" id="code_red">80% Full <i class="ri-delete-bin-line"></i></span>
+                        </span>
+                      </div>
+                      <p><i class="ri-time-line"></i> 2 mins away</p>
+                    </div>
+                  
+                    <div class="skill-box">
+                      
+                        <div class="quick_actions">
+                            <span class="title">Location 2</span>
+                            <div class="action_btns">
+                                <i class="ri-compass-line">
+                                    <span class="tooltiptext">Get Directions</span>
+                                </i>
+                                <i class="ri-customer-service-fill">
+                                    <span class="tooltiptext">Report Issue</span>
+                                </i>
+                                <i class="ri-truck-line">
+                                    <span class="tooltiptext">Request Pickup</span>
+                                </i>
+                                <i class="ri-star-line">
+                                    <span class="tooltiptext">Mark as Favorite</span>
+                                </i>
+                            </div>
+                        </div>
+                     
+                      <div class="skill-bar">
+                        <span class="skill-per css">
+                          <span class="toolti">30% Full <i class="ri-delete-bin-line"></i></span>
+                        </span>
+                      </div>
+                      <p><i class="ri-time-line"></i> 4 mins away</p>
+                    </div>
+                    <div class="skill-box">
+                        <div class="quick_actions">
+                            <span class="title">Location 3</span>
+                            <div class="action_btns">
+                                <i class="ri-compass-line">
+                                    <span class="tooltiptext">Get Directions</span>
+                                </i>
+                                <i class="ri-customer-service-fill">
+                                    <span class="tooltiptext">Report Issue</span>
+                                </i>
+                                <i class="ri-truck-line">
+                                    <span class="tooltiptext">Request Pickup</span>
+                                </i>
+                                <i class="ri-star-line">
+                                    <span class="tooltiptext">Mark as Favorite</span>
+                                </i>
+                            </div>
+                        </div>
+                     
+                  
+                      <div class="skill-bar">
+                        <span class="skill-per javascript">
+                          <span class="toolti">40% Full <i class="ri-delete-bin-line"></i></span>
+                        </span>
+                      </div>
+                      <p><i class="ri-time-line"></i> 7 mins away</p>
+                    </div>
+                    <div class="skill-box">
+                        <div class="quick_actions">
+                            <span class="title">Location 4</span>
+                            <div class="action_btns">
+                                <i class="ri-compass-line">
+                                    <span class="tooltiptext">Get Directions</span>
+                                </i>
+                                <i class="ri-customer-service-fill">
+                                    <span class="tooltiptext">Report Issue</span>
+                                </i>
+                                <i class="ri-truck-line">
+                                    <span class="tooltiptext">Request Pickup</span>
+                                </i>
+                                <i class="ri-star-line">
+                                    <span class="tooltiptext">Mark as Favorite</span>
+                                </i>
+                            </div>
+                        </div>
+                  
+                      <div class="skill-bar">
+                        <span class="skill-per nodejs">
+                          <span class="toolti" id="code_red">60% Full <i class="ri-delete-bin-line"></i></span>
+                        </span>
+                      </div>
+                      <p><i class="ri-time-line"></i> 10 mins away</p>
+                    </div>
+                    <a href="#">See more <i class="ri-arrow-right-line"></i></a>
+                  </div>
+            </div>
+           
+            <div class="row2">
+                <h1><i class="ri-information-2-fill"></i> Missed pick-ups</h1>
+                <div class="row_block">
+                    <h1>15</h1>
+                    <form action="">
+                        <select name="days" id="num_week">
+                            <option value="7">1 week</option>
+                            <option value="30">2 week</option>
+                            <option value="90">1 month</option>
+                            <option value="90">All time</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row2">
+                <h1>Average fill level at pickup</h1>
+            </div>
+            
+                <div class="col2">
+                    <div class="box">
+                        <h1>Collections Avoided</h1>
+                    </div>
+                    <div class="box box_eco">
+                        <h1>Plastic bags diverted from landfill</h1>
+                        <h3>241</h3>
+                    </div>
+                </div>
+           
+           
+          </div>
+          <div class="bottom_space">
+        
+          </div>
       </div>
+     
     </div>
   </main>
 
         
     </div>
     
-    
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 <script src="/js/index.js"></script>
 <script src="/js/dashboard.js"></script>
+<script src="/js/chartjs.js"></script>
 
 </body>
 
