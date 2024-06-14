@@ -194,7 +194,7 @@ SMWS_Group10/
 ### Running Tests
 1. **To run the unit tests, use:** first Ensure you have tests in the tests directory covering your application's critical parts.
     ```bash     
-    git push heroku main
+    pytest
 ## Contributing
 
 Feel free to contribute by creating pull requests or opening issues. Make sure to follow the project's code style and write tests for new features or bug fixes.
