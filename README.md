@@ -192,8 +192,8 @@ SMWS_Group10/
 
 ## Testing
 ### Running Tests
-**To run the unit tests, use:** first Ensure you have tests in the tests directory covering your application's critical parts.
-    ```bash
+1. **To run the unit tests, use:** first Ensure you have tests in the tests directory covering your application's critical parts.
+    ```bash     
     git push heroku main
 ## Contributing
 
