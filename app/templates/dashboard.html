@@ -57,7 +57,8 @@
           <div class="c-header-icon logout"><i class="ri-logout-circle-r-line"></i></div>
         </div>
       </div>
-    </header><div class="l-sidebar">
+    </header>
+    <div class="l-sidebar">
         <div class="logo">
             <div class="logo__txt">Smartpro</div>
         </div>
@@ -65,14 +66,14 @@
             <nav class="c-menu js-menu">
                 <ul class="u-list">
                     <!-- Dashboard -->
-                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Dashboard">
+                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Dashboard" onclick="window.location.href='../templates/dashboard.html'">
                         <div class="c-menu__item__inner">
                             <i class="ri-dashboard-fill"></i>
                             <div class="c-menu-item__title"><span>Dashboard</span></div>
                         </div>
                     </li>
                     <!-- Waste Collection Schedule -->
-                    <li class="c-menu__item" data-toggle="tooltip" title="Waste Collection Schedule">
+                    <li class="c-menu__item" data-toggle="tooltip" title="Waste Collection Schedule" onclick="window.location.href='../templates/wcs.html'">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-calendar-alt"></i>
                             <div class="c-menu-item__title"><span>Waste Collection Schedule</span></div>
@@ -107,241 +108,246 @@
   </div>
   <main class="l-main">
     <div class="content-wrapper content-wrapper--with-bg">
-      <h1 class="page-title">Hello,</h1>
-      <h1 class="name">Simeon Azeh</h1>
-      <div class="page-content">
-        <div class="column_container">
-          <div class="row">
-            <div class="info">
-              <h2>72%</h2>
-              <p>Average fill level</p>
-            </div>
-            <div class="info">
-              <h2>7</h2>
-              <p>Ready for pickup</p>
-            </div>
-            <div class="info">
-              <h2>131</h2>
-              <p>Bins total</p>
-            </div>
-          </div>
-          <div class="row timeline">
-            <p>3 days</p>
-            <p class="active_date">7 days</p>
-            <p>2 weeks</p>
-            <p>1 month</p>
-            <p>All time</p>
-          </div>
-        </div>
-        <div class="graph_dis">
-            <canvas id="fillLevelChart" style="width: 450px; height: 100px;"></canvas>
-          </div>
-          <div class="column_container2">
-            <div class="row2">
-                <h1><i class="ri-focus-fill"></i> Bins Near you</h1>
-                <h2 class="available">7+ <span>Available</span></h2>
-                <div class="container_2">
-                    <div class="skill-box">
-                        <div class="quick_actions">
-                            <span class="title">Location 1</span>
-                            <div class="action_btns">
-                                <i class="ri-compass-line">
-                                    <span class="tooltiptext">Get Directions</span>
-                                </i>
-                                <i class="ri-customer-service-fill">
-                                    <span class="tooltiptext">Report Issue</span>
-                                </i>
-                                <i class="ri-truck-line">
-                                    <span class="tooltiptext">Request Pickup</span>
-                                </i>
-                                <i class="ri-star-line">
-                                    <span class="tooltiptext">Mark as Favorite</span>
-                                </i>
-                            </div>
-                        </div>
-                     
-                  
-                      <div class="skill-bar">
-                        <span class="skill-per html">
-                          <span class="toolti" id="code_red">80% Full <i class="ri-delete-bin-line"></i></span>
-                        </span>
-                      </div>
-                      <p><i class="ri-time-line"></i> 2 mins away</p>
-                    </div>
-                  
-                    <div class="skill-box">
-                      
-                        <div class="quick_actions">
-                            <span class="title">Location 2</span>
-                            <div class="action_btns">
-                                <i class="ri-compass-line">
-                                    <span class="tooltiptext">Get Directions</span>
-                                </i>
-                                <i class="ri-customer-service-fill">
-                                    <span class="tooltiptext">Report Issue</span>
-                                </i>
-                                <i class="ri-truck-line">
-                                    <span class="tooltiptext">Request Pickup</span>
-                                </i>
-                                <i class="ri-star-line">
-                                    <span class="tooltiptext">Mark as Favorite</span>
-                                </i>
-                            </div>
-                        </div>
-                     
-                      <div class="skill-bar">
-                        <span class="skill-per css">
-                          <span class="toolti">30% Full <i class="ri-delete-bin-line"></i></span>
-                        </span>
-                      </div>
-                      <p><i class="ri-time-line"></i> 4 mins away</p>
-                    </div>
-                    <div class="skill-box">
-                        <div class="quick_actions">
-                            <span class="title">Location 3</span>
-                            <div class="action_btns">
-                                <i class="ri-compass-line">
-                                    <span class="tooltiptext">Get Directions</span>
-                                </i>
-                                <i class="ri-customer-service-fill">
-                                    <span class="tooltiptext">Report Issue</span>
-                                </i>
-                                <i class="ri-truck-line">
-                                    <span class="tooltiptext">Request Pickup</span>
-                                </i>
-                                <i class="ri-star-line">
-                                    <span class="tooltiptext">Mark as Favorite</span>
-                                </i>
-                            </div>
-                        </div>
-                     
-                  
-                      <div class="skill-bar">
-                        <span class="skill-per javascript">
-                          <span class="toolti">40% Full <i class="ri-delete-bin-line"></i></span>
-                        </span>
-                      </div>
-                      <p><i class="ri-time-line"></i> 7 mins away</p>
-                    </div>
-                    <div class="skill-box">
-                        <div class="quick_actions">
-                            <span class="title">Location 4</span>
-                            <div class="action_btns">
-                                <i class="ri-compass-line">
-                                    <span class="tooltiptext">Get Directions</span>
-                                </i>
-                                <i class="ri-customer-service-fill">
-                                    <span class="tooltiptext">Report Issue</span>
-                                </i>
-                                <i class="ri-truck-line">
-                                    <span class="tooltiptext">Request Pickup</span>
-                                </i>
-                                <i class="ri-star-line">
-                                    <span class="tooltiptext">Mark as Favorite</span>
-                                </i>
-                            </div>
-                        </div>
-                  
-                      <div class="skill-bar">
-                        <span class="skill-per nodejs">
-                          <span class="toolti" id="code_red">60% Full <i class="ri-delete-bin-line"></i></span>
-                        </span>
-                      </div>
-                      <p><i class="ri-time-line"></i> 10 mins away</p>
-                    </div>
-                    <a href="#" class="see_more">See more <i class="ri-arrow-right-line"></i></a>
+    
+      <section id="dashboard" class="content-section active">
+        <h1 class="page-title">Hello,</h1>
+        <h1 class="name">Simeon Azeh</h1>
+            <!-- Existing dashboard content goes here -->
+            <div class="page-content">
+              <div class="column_container">
+                <div class="row">
+                  <div class="info">
+                    <h2>72%</h2>
+                    <p>Average fill level</p>
                   </div>
-            </div>
-           
-            <div class="row2">
-                <h1><i class="ri-information-2-fill"></i> Missed pick-ups</h1>
-                <div class="row_block">
-                    <h1>15</h1>
-                    <form action="">
-                        <select name="days" id="num_week">
-                            <option value="7">1 week</option>
-                            <option value="30">2 week</option>
-                            <option value="90">1 month</option>
-                            <option value="90">All time</option>
-                        </select>
-                    </form>
+                  <div class="info">
+                    <h2>7</h2>
+                    <p>Ready for pickup</p>
+                  </div>
+                  <div class="info">
+                    <h2>131</h2>
+                    <p>Bins total</p>
+                  </div>
                 </div>
-                <div class="stats">
-                  <div class="stat-box">
-                      <h3>Highest Missed</h3>
-                      <p><span>5</span> on April 12</p>
-                  </div>
-                  <div class="stat-box">
-                      <h3>Lowest Missed</h3>
-                      <p><span>1</span> on June 5</p>
-                  </div>
-                  <div class="stat-box">
-                      <h3>Average Missed</h3>
-                      <p><span>3</span> per week</p>
-                  </div>
-              </div>
-            </div>
-
-            <div class="row2">
-                <h1><i class="ri-information-2-fill"></i> Average fill level at pickup</h1>
-                <div class="pie-wrapper progress-75 style-2">
-                  <span class="label">72<span class="smaller">%</span></span>
-                  <div class="pie">
-                    <div class="left-side half-circle"></div>
-                    <div class="right-side half-circle"></div>
-                  </div>
-                  <div class="shadow"></div>
+                <div class="row timeline">
+                  <p>3 days</p>
+                  <p class="active_date">7 days</p>
+                  <p>2 weeks</p>
+                  <p>1 month</p>
+                  <p>All time</p>
                 </div>
-                <div class="legend">
-                  <h2>Legend</h2>
-                  <div class="leg_con">
-                    <ul>
-                      <li><span class="color-box" style="background-color: tomato;"></span> Bin 1 - 72%</li>
-                      <li><span class="color-box" style="background-color: #9b59b6;"></span> Bin 2 - 60%</li>
-                      <li><span class="color-box" style="background-color: #1abc9c;"></span> Bin 3 - 45%</li>
-                  </ul>
-                  </div>
-                  
               </div>
-              <div class="analysis">
-                  <h2>Analysis</h2>
-                  <p>The average fill level at pickup shows significant variation among the bins. Bin 1 is nearly full at 72%, while Bin 3 has a lower fill level at 45%. This data helps in optimizing the pickup schedule to ensure efficiency and timely waste management.</p>
-              </div>
-            </div>
-            
-                <div class="col2">
-                    <div class="box">
-                        <h1><i class="ri-information-2-fill"></i>  Collections Avoided</h1>
-                      
-                        <div class="chart-container">
-                          <canvas id="collectionsAvoidedChart"></canvas>
-                      </div>
-                      <div class="metrics">
-                        <h2>Key Metrics</h2>
-                        <ul>
-                            <li>Total Collections Avoided: <span>120</span></li>
-                            <li>Average Collections Avoided per Month: <span>5</span></li>
-                            <li>Highest Collections Avoided in a Month: <span>15 (April)</span></li>
+              <div class="graph_dis">
+                  <canvas id="fillLevelChart" style="width: 450px; height: 100px;"></canvas>
+                </div>
+                <div class="column_container2">
+                  <div class="row2">
+                      <h1><i class="ri-focus-fill"></i> Bins Near you</h1>
+                      <h2 class="available">7+ <span>Available</span></h2>
+                      <div class="container_2">
+                          <div class="skill-box">
+                              <div class="quick_actions">
+                                  <span class="title">Location 1</span>
+                                  <div class="action_btns">
+                                      <i class="ri-compass-line">
+                                          <span class="tooltiptext">Get Directions</span>
+                                      </i>
+                                      <i class="ri-customer-service-fill">
+                                          <span class="tooltiptext">Report Issue</span>
+                                      </i>
+                                      <i class="ri-truck-line">
+                                          <span class="tooltiptext">Request Pickup</span>
+                                      </i>
+                                      <i class="ri-star-line">
+                                          <span class="tooltiptext">Mark as Favorite</span>
+                                      </i>
+                                  </div>
+                              </div>
+                           
+                        
+                            <div class="skill-bar">
+                              <span class="skill-per html">
+                                <span class="toolti" id="code_red">80% Full <i class="ri-delete-bin-line"></i></span>
+                              </span>
+                            </div>
+                            <p><i class="ri-time-line"></i> 2 mins away</p>
+                          </div>
+                        
+                          <div class="skill-box">
                             
+                              <div class="quick_actions">
+                                  <span class="title">Location 2</span>
+                                  <div class="action_btns">
+                                      <i class="ri-compass-line">
+                                          <span class="tooltiptext">Get Directions</span>
+                                      </i>
+                                      <i class="ri-customer-service-fill">
+                                          <span class="tooltiptext">Report Issue</span>
+                                      </i>
+                                      <i class="ri-truck-line">
+                                          <span class="tooltiptext">Request Pickup</span>
+                                      </i>
+                                      <i class="ri-star-line">
+                                          <span class="tooltiptext">Mark as Favorite</span>
+                                      </i>
+                                  </div>
+                              </div>
+                           
+                            <div class="skill-bar">
+                              <span class="skill-per css">
+                                <span class="toolti">30% Full <i class="ri-delete-bin-line"></i></span>
+                              </span>
+                            </div>
+                            <p><i class="ri-time-line"></i> 4 mins away</p>
+                          </div>
+                          <div class="skill-box">
+                              <div class="quick_actions">
+                                  <span class="title">Location 3</span>
+                                  <div class="action_btns">
+                                      <i class="ri-compass-line">
+                                          <span class="tooltiptext">Get Directions</span>
+                                      </i>
+                                      <i class="ri-customer-service-fill">
+                                          <span class="tooltiptext">Report Issue</span>
+                                      </i>
+                                      <i class="ri-truck-line">
+                                          <span class="tooltiptext">Request Pickup</span>
+                                      </i>
+                                      <i class="ri-star-line">
+                                          <span class="tooltiptext">Mark as Favorite</span>
+                                      </i>
+                                  </div>
+                              </div>
+                           
+                        
+                            <div class="skill-bar">
+                              <span class="skill-per javascript">
+                                <span class="toolti">40% Full <i class="ri-delete-bin-line"></i></span>
+                              </span>
+                            </div>
+                            <p><i class="ri-time-line"></i> 7 mins away</p>
+                          </div>
+                          <div class="skill-box">
+                              <div class="quick_actions">
+                                  <span class="title">Location 4</span>
+                                  <div class="action_btns">
+                                      <i class="ri-compass-line">
+                                          <span class="tooltiptext">Get Directions</span>
+                                      </i>
+                                      <i class="ri-customer-service-fill">
+                                          <span class="tooltiptext">Report Issue</span>
+                                      </i>
+                                      <i class="ri-truck-line">
+                                          <span class="tooltiptext">Request Pickup</span>
+                                      </i>
+                                      <i class="ri-star-line">
+                                          <span class="tooltiptext">Mark as Favorite</span>
+                                      </i>
+                                  </div>
+                              </div>
+                        
+                            <div class="skill-bar">
+                              <span class="skill-per nodejs">
+                                <span class="toolti" id="code_red">60% Full <i class="ri-delete-bin-line"></i></span>
+                              </span>
+                            </div>
+                            <p><i class="ri-time-line"></i> 10 mins away</p>
+                          </div>
+                          <a href="#" class="see_more">See more <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                  </div>
+                 
+                  <div class="row2">
+                      <h1><i class="ri-information-2-fill"></i> Missed pick-ups</h1>
+                      <div class="row_block">
+                          <h1>15</h1>
+                          <form action="">
+                              <select name="days" id="num_week">
+                                  <option value="7">1 week</option>
+                                  <option value="30">2 week</option>
+                                  <option value="90">1 month</option>
+                                  <option value="90">All time</option>
+                              </select>
+                          </form>
+                      </div>
+                      <div class="stats">
+                        <div class="stat-box">
+                            <h3>Highest Missed</h3>
+                            <p><span>5</span> on April 12</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Lowest Missed</h3>
+                            <p><span>1</span> on June 5</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>Average Missed</h3>
+                            <p><span>3</span> per week</p>
+                        </div>
+                    </div>
+                  </div>
+      
+                  <div class="row2">
+                      <h1><i class="ri-information-2-fill"></i> Average fill level at pickup</h1>
+                      <div class="pie-wrapper progress-75 style-2">
+                        <span class="label">72<span class="smaller">%</span></span>
+                        <div class="pie">
+                          <div class="left-side half-circle"></div>
+                          <div class="right-side half-circle"></div>
+                        </div>
+                        <div class="shadow"></div>
+                      </div>
+                      <div class="legend">
+                        <h2>Legend</h2>
+                        <div class="leg_con">
+                          <ul>
+                            <li><span class="color-box" style="background-color: tomato;"></span> Bin 1 - 72%</li>
+                            <li><span class="color-box" style="background-color: #9b59b6;"></span> Bin 2 - 60%</li>
+                            <li><span class="color-box" style="background-color: #1abc9c;"></span> Bin 3 - 45%</li>
                         </ul>
+                        </div>
+                        
                     </div>
+                    <div class="analysis">
+                        <h2>Analysis</h2>
+                        <p>The average fill level at pickup shows significant variation among the bins. Bin 1 is nearly full at 72%, while Bin 3 has a lower fill level at 45%. This data helps in optimizing the pickup schedule to ensure efficiency and timely waste management.</p>
                     </div>
-                    <div class="box box_eco">
-                        <h1>Plastic bags diverted from landfill</h1>
-                        <h3>241</h3>
-                    </div>
+                  </div>
+                  
+                      <div class="col2">
+                          <div class="box">
+                              <h1><i class="ri-information-2-fill"></i>  Collections Avoided</h1>
+                            
+                              <div class="chart-container">
+                                <canvas id="collectionsAvoidedChart"></canvas>
+                            </div>
+                            <div class="metrics">
+                              <h2>Key Metrics</h2>
+                              <ul>
+                                  <li>Total Collections Avoided: <span>120</span></li>
+                                  <li>Average Collections Avoided per Month: <span>5</span></li>
+                                  <li>Highest Collections Avoided in a Month: <span>15 (April)</span></li>
+                                  
+                              </ul>
+                          </div>
+                          </div>
+                          <div class="box box_eco">
+                              <h1>Plastic bags diverted from landfill</h1>
+                              <h3>241</h3>
+                          </div>
+                      </div>
+                     
+                 
                 </div>
-               
-           
-          </div>
-          <div class="summary">
-            <p>Monitoring and optimizing the waste collection schedule has led to a significant reduction in unnecessary collections, saving time and resources.</p>
-            <button>Join Beta</button>
-        </div>
-          <div class="bottom_space">
-        
-          </div>
-      </div>
+                <div class="summary">
+                  <p>Monitoring and optimizing the waste collection schedule has led to a significant reduction in unnecessary collections, saving time and resources.</p>
+                  <button>Join Beta</button>
+              </div>
+                <div class="bottom_space">
+              
+                </div>
+            </div>
+    </section>
+    
      
     </div>
   </main>

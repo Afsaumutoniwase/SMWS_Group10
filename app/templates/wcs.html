@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste collection schedule</title>
+  
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+        integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.coam/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+</head>
+<body>
+    <div class="loader_container" id="loader">
+        <div class="spinnerContainer">
+            <div class="spinner"></div>
+            <div class="loader">
+              <p>Loading</p>
+              <div class="words">
+                <span class="word">schedules</span>
+                <span class="word">collections</span>
+                <span class="word">recycling data</span>
+                <span class="word">environmental impact</span>
+                <span class="word">notifications</span>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    <div class="content">
+       
+      
+    <div class="sidebar-is-reduced">
+    <header class="l-header">
+      <div class="l-header__inner clearfix">
+        <div class="c-header-icon js-hamburger">
+          <div class="hamburger-toggle"><span class="bar-top"></span><span class="bar-mid"></span><span class="bar-bot"></span></div>
+        </div>
+        <div class="c-header-icon has-dropdown"><span class="c-badge c-badge--red c-badge--header-icon animated swing">13</span><i class="fa fa-bell"></i>
+          <div class="c-dropdown c-dropdown--notifications">
+            <div class="c-dropdown__header"></div>
+            <div class="c-dropdown__content"></div>
+          </div>
+        </div>
+        <div class="c-search">
+          <input class="c-search__input u-input" placeholder="Search..." type="text"/>
+          
+        </div>
+        <div class="header-icons-group">
+          <div class="c-header-icon basket"><span class="c-badge c-badge--blue c-badge--header-icon animated swing">4</span> <i class="fa fa-user-circle"></i></div>
+          <div class="c-header-icon logout"><i class="ri-logout-circle-r-line"></i></div>
+        </div>
+      </div>
+    </header>
+    <div class="l-sidebar">
+        <div class="logo">
+            <div class="logo__txt">Smartpro</div>
+        </div>
+        <div class="l-sidebar__content">
+            <nav class="c-menu js-menu">
+                <ul class="u-list">
+                    <!-- Dashboard -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="Dashboard" onclick="window.location.href='../templates/dashboard.html'">
+                        <div class="c-menu__item__inner">
+                            <i class="ri-dashboard-fill"></i>
+                            <div class="c-menu-item__title"><span>Dashboard</span></div>
+                        </div>
+                    </li>
+                    <!-- Waste Collection Schedule -->
+                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Waste Collection Schedule" onclick="window.location.href='../templates/wcshedule.html'">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-calendar-alt"></i>
+                            <div class="c-menu-item__title"><span>Waste Collection Schedule</span></div>
+                        </div>
+                    </li>
+                    <!-- Recycling Tracker -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="Recycling Tracker">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-recycle"></i>
+                            <div class="c-menu-item__title"><span>Recycling Tracker</span></div>
+                        </div>
+                    </li>
+                    <!-- Notifications -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="Notifications">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-bell"></i>
+                            <div class="c-menu-item__title"><span>Notifications</span></div>
+                        </div>
+                    </li>
+                    <!-- User Settings -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="User Settings">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-user-cog"></i>
+                            <div class="c-menu-item__title"><span>User Settings</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+  </div>
+  <main class="l-main">
+    <div class="content-wrapper content-wrapper--with-bg">
+    
+      <section id="dashboard" class="content-section active">
+        <h1 class="page-title">Simeon Azeh,</h1>
+        <h1 class="name">You can now effectively schedule your waste collection here.</h1>
+            <!-- Existing dashboard content goes here -->
+            <div class="page-content schedule_con">
+              <div class="row_main">
+                <div class="schedule_container">
+               
+                  <h2>Monthly waste pickups</h2>
+                  <div id='calendar'></div>
+  
+              </div>
+              <div class="col">
+                <div class="card_not">
+                  <p class="time-text"><span>09:30</span><span class="time-sub-text">PM</span></p>
+                  <p class="day-text">Wednesday, June 19th</p>
+                  <p class="day-text"><i class="ri-information-2-fill"></i> upcoming waste collection</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" stroke-width="0" fill="currentColor" stroke="currentColor" class="moon"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></svg>
+                  </div>
+                  <div class="current_bin">
+                    <div class="notification">
+                      <div class="notiglow"></div>
+                      <div class="notiborderglow"></div>
+                      <div class="notititle">Your selected Bin</div>
+                      <div class="notibody">Bin 4023, Location X
+                        <button>Change <i class="ri-settings-3-line"></i></button>
+                      </div>
+                     
+                    </div>
+                  </div>
+                 
+                  
+              </div>
+
+              <div class="waste-instructions">
+                <h2>Waste Separation Instructions</h2>
+                <div class="instructions">
+                    <div class="instruction">
+                        <h3>General Waste</h3>
+                        <p>Place in black bins. Includes non-recyclable and non-organic waste.</p>
+                    </div>
+                    <div class="instruction">
+                        <h3>Recyclables</h3>
+                        <p>Place in blue bins. Includes paper, plastics, and metals.</p>
+                    </div>
+                    <div class="instruction">
+                        <h3>Organic Waste</h3>
+                        <p>Place in green bins. Includes food scraps and yard waste.</p>
+                    </div>
+                    <button>FAQs</button>
+                </div>
+            </div>
+            <div class="floating-form" id="floatingForm">
+              <div class="form-header">
+                  <h2>Schedule Waste Collection</h2>
+                 
+              </div>
+              <form id="wasteCollectionForm">
+                  <label for="binType">Select Bin Type:</label>
+                  <select id="binType" name="binType" required>
+                      <option value="">Choose...</option>
+                      <option value="green">Green Bin (Organics)</option>
+                      <option value="blue">Blue Bin (Recyclables)</option>
+                      <option value="black">Black Bin (General Waste)</option>
+                  </select>
+      
+                  <label for="collectionDate">Choose Collection Date:</label>
+                  <input type="date" id="collectionDate" name="collectionDate" required>
+      
+                  <label for="collectionTime">Choose Collection Time:</label>
+                  <input type="time" id="collectionTime" name="collectionTime" required>
+      
+                  <button type="submit">Schedule Collection</button>
+              </form>
+          </div>
+              </div>
+             
+            <div class="bottom_space">
+              
+            </div>
+            <div class="bottom_space">
+              
+            </div>
+    </section>
+    
+     
+    </div>
+  </main>
+
+        
+    </div>
+    
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<script src="../static/js/index.js"></script>
+<script src="../static/js/dashboard.js"></script>
+<script src="../static/js/chartjs.js"></script>
+<script src="../static/js/dashjquery.js"></script>
+</body>
+
+</html>
