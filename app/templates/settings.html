@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste collection schedule</title>
+  
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+    <link rel="stylesheet" href="../static/css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+        integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.coam/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+</head>
+<body>
+    <div class="loader_container" id="loader">
+        <div class="spinnerContainer">
+            <div class="spinner"></div>
+            <div class="loader">
+              <p>Loading</p>
+              <div class="words">
+                <span class="word">schedules</span>
+                <span class="word">collections</span>
+                <span class="word">recycling data</span>
+                <span class="word">environmental impact</span>
+                <span class="word">notifications</span>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    <div class="content">
+       
+      
+    <div class="sidebar-is-reduced">
+    <header class="l-header">
+      <div class="l-header__inner clearfix">
+        <div class="c-header-icon js-hamburger">
+          <div class="hamburger-toggle"><span class="bar-top"></span><span class="bar-mid"></span><span class="bar-bot"></span></div>
+        </div>
+        <div class="c-header-icon has-dropdown"><span class="c-badge c-badge--red c-badge--header-icon animated swing">13</span><i class="fa fa-bell"></i>
+          <div class="c-dropdown c-dropdown--notifications">
+            <div class="c-dropdown__header"></div>
+            <div class="c-dropdown__content"></div>
+          </div>
+        </div>
+        <div class="c-search">
+          <input class="c-search__input u-input" placeholder="Search..." type="text"/>
+          
+        </div>
+        <div class="header-icons-group">
+          <div class="c-header-icon basket"><span class="c-badge c-badge--blue c-badge--header-icon animated swing">4</span> <i class="fa fa-user-circle"></i></div>
+          <div class="c-header-icon logout"><i class="ri-logout-circle-r-line"></i></div>
+        </div>
+      </div>
+    </header>
+    <div class="l-sidebar">
+        <div class="logo">
+            <div class="logo__txt">Smartpro</div>
+        </div>
+        <div class="l-sidebar__content">
+            <nav class="c-menu js-menu">
+                <ul class="u-list">
+                    <!-- Dashboard -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="Dashboard" onclick="window.location.href='../templates/dashboard.html'">
+                        <div class="c-menu__item__inner">
+                            <i class="ri-dashboard-fill"></i>
+                            <div class="c-menu-item__title"><span>Dashboard</span></div>
+                        </div>
+                    </li>
+                    <!-- Waste Collection Schedule -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="Waste Collection Schedule" onclick="window.location.href='../templates/wcshedule.html'">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-calendar-alt"></i>
+                            <div class="c-menu-item__title"><span>Waste Collection Schedule</span></div>
+                        </div>
+                    </li>
+                    <!-- Recycling Tracker -->
+                    <li class="c-menu__item " data-toggle="tooltip" title="Recycling Tracker">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-recycle"></i>
+                            <div class="c-menu-item__title"><span>Recycling Tracker</span></div>
+                        </div>
+                    </li>
+                    <!-- Notifications -->
+                    <li class="c-menu__item" data-toggle="tooltip" title="Notifications" >
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-bell"></i>
+                            <div class="c-menu-item__title"><span>Notifications</span></div>
+                        </div>
+                    </li>
+                    <!-- User Settings -->
+                    <li class="c-menu__item is-active" data-toggle="tooltip" title="User Settings">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-user-cog"></i>
+                            <div class="c-menu-item__title"><span>User Settings</span></div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+  </div>
+  <main class="l-main">
+    <div class="content-wrapper content-wrapper--with-bg">
+    
+      <section id="dashboard" class="content-section active">
+        <h1 class="page-title">Hello,</h1>
+        <h1 class="name">Simeon Azeh</h1>
+            <!-- Existing dashboard content goes here -->
+            <div class="page-content">
+                <div class="settings">
+                    <section class="settings-section">
+                        <h3>Profile Settings</h3>
+                        <div class="settings-item">
+                            <label for="profile-picture">Profile Picture</label>
+                            <input type="file" id="profile-picture">
+                        </div>
+                        <div class="settings-item">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" value="Simeon Azeh">
+                        </div>
+                        <div class="settings-item">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="user@example.com">
+                        </div>
+                        <div class="settings-item">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" value="+1234567890">
+                        </div>
+                        <div class="settings-item">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" value="123 Main St, City, Country">
+                        </div>
+                    </section>
+            
+                    <section class="settings-section">
+                        <h3>Notification Settings</h3>
+                        <div class="settings-item">
+                            <label for="email-notifications">Email Notifications</label>
+                            <input type="checkbox" id="email-notifications" checked>
+                        </div>
+                        <div class="settings-item">
+                            <label for="sms-notifications">SMS Notifications</label>
+                            <input type="checkbox" id="sms-notifications">
+                        </div>
+                        <div class="settings-item">
+                            <label for="push-notifications">Push Notifications</label>
+                            <input type="checkbox" id="push-notifications" checked>
+                        </div>
+                        <div class="settings-item">
+                            <label for="notification-frequency">Notification Frequency</label>
+                            <select id="notification-frequency">
+                                <option value="immediate">Immediate</option>
+                                <option value="daily">Daily Summary</option>
+                                <option value="weekly">Weekly Summary</option>
+                            </select>
+                        </div>
+                    </section>
+            
+                    <section class="settings-section">
+                        <h3>Waste Collection Preferences</h3>
+                        <div class="settings-item">
+                            <label for="preferred-days">Preferred Collection Days</label>
+                            <select id="preferred-days" multiple>
+                                <option value="monday">Monday</option>
+                                <option value="tuesday">Tuesday</option>
+                                <option value="wednesday">Wednesday</option>
+                                <option value="thursday">Thursday</option>
+                                <option value="friday">Friday</option>
+                            </select>
+                        </div>
+                        <div class="settings-item">
+                            <label for="collection-time">Collection Time</label>
+                            <input type="time" id="collection-time">
+                        </div>
+                        <div class="settings-item">
+                            <label for="special-instructions">Special Instructions</label>
+                            <textarea id="special-instructions"></textarea>
+                        </div>
+                    </section>
+            
+                    <section class="settings-section">
+                        <h3>Recycling Tracker Settings</h3>
+                        <div class="settings-item">
+                            <label for="monthly-goal">Monthly Goal (kg)</label>
+                            <input type="number" id="monthly-goal" value="50">
+                        </div>
+                        <div class="settings-item">
+                            <label for="progress-updates">Progress Updates</label>
+                            <select id="progress-updates">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </div>
+                        <div class="settings-item">
+                            <label for="recycling-tips">Recycling Tips</label>
+                            <input type="checkbox" id="recycling-tips" checked>
+                        </div>
+                    </section>
+            
+                    <section class="settings-section">
+                        <h3>Security Settings</h3>
+                        <div class="settings-item">
+                            <label for="password">Change Password</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div class="settings-item">
+                            <label for="two-factor-auth">Two-Factor Authentication</label>
+                            <input type="checkbox" id="two-factor-auth" checked>
+                        </div>
+                        <div class="settings-item">
+                            <label for="login-history">Login History</label>
+                            <button id="login-history">View</button>
+                        </div>
+                    </section>
+            
+                    <section class="settings-section">
+                        <h3>Privacy Settings</h3>
+                        <div class="settings-item">
+                            <label for="data-sharing">Data Sharing</label>
+                            <input type="checkbox" id="data-sharing">
+                        </div>
+                        <div class="settings-item">
+                            <label for="location-tracking">Location Tracking</label>
+                            <input type="checkbox" id="location-tracking" checked>
+                        </div>
+                    </section>
+            
+                    <section class="settings-section">
+                        <h3>App Preferences</h3>
+                        <div class="settings-item">
+                            <label for="language">Language</label>
+                            <select id="language">
+                                <option value="english">English</option>
+                             
+                                <option value="french">French</option>
+                            
+                            </select>
+                        </div>
+                        <div class="settings-item">
+                            <label for="theme">Theme</label>
+                            <select id="theme">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                                <option value="system">System Default</option>
+                            </select>
+                        </div>
+                        <div class="settings-item">
+                            <label for="accessibility">Accessibility</label>
+                            <input type="checkbox" id="accessibility">
+                        </div>
+                    </section>
+            
+                    <section class="settings-section">
+                        <h3>Feedback and Support</h3>
+                        <div class="settings-item">
+                            <label for="report-problem">Report a Problem</label>
+                            <button id="report-problem">Report</button>
+                        </div>
+                        <div class="settings-item">
+                            <label for="submit-feedback">Submit Feedback</label>
+                            <button id="submit-feedback">Submit</button>
+                        </div>
+                        <div class="settings-item">
+                            <label for="contact-support">Contact Support</label>
+                            <button id="contact-support">Contact</button>
+                        </div>
+                    </section>
+                </div>
+            
+            
+            <div class="bottom_space">
+              
+            </div>
+           >
+    </section>
+    
+     
+    </div>
+  </main>
+
+        
+    </div>
+    
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<script src="../static/js/index.js"></script>
+<script src="../static/js/dashboard.js"></script>
+<script src="../static/js/settings.js"></script>
+<script src="../static/js/dashjquery.js"></script>
+</body>
+
+</html>
