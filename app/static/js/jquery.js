@@ -23,3 +23,25 @@ $(".btn-with-icon").on("click", function() {
     });
 });
 
+
+// scripts.js
+
+document.addEventListener("DOMContentLoaded", () => {
+    const notificationCards = document.querySelectorAll(".notification-card");
+
+    notificationCards.forEach(card => {
+        if (card.getAttribute("data-unread") === "true") {
+            card.classList.add("unread");
+        }
+
+        card.addEventListener("click", () => {
+            card.setAttribute("data-unread", "false");
+            card.classList.remove("unread");
+            const unreadBadge = card.querySelector(".unread-badge");
+            if (unreadBadge) {
+                unreadBadge.remove();
+            }
+        });
+    });
+});
+
