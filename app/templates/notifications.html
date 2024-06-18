@@ -79,14 +79,14 @@
                         </div>
                     </li>
                     <!-- Recycling Tracker -->
-                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Recycling Tracker">
+                    <li class="c-menu__item " data-toggle="tooltip" title="Recycling Tracker">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-recycle"></i>
                             <div class="c-menu-item__title"><span>Recycling Tracker</span></div>
                         </div>
                     </li>
                     <!-- Notifications -->
-                    <li class="c-menu__item" data-toggle="tooltip" title="Notifications" onclick="window.location.href='../templates/notifications.html'">
+                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Notifications" >
                         <div class="c-menu__item__inner">
                             <i class="fa fa-bell"></i>
                             <div class="c-menu-item__title"><span>Notifications</span></div>
@@ -109,42 +109,59 @@
     <div class="content-wrapper content-wrapper--with-bg">
     
       <section id="dashboard" class="content-section active">
-        <h1 class="page-title">Simeon Azeh,</h1>
-        <h1 class="name">Amazing job on keeping earth healthy.</h1>
+        <h1 class="page-title">Hello,</h1>
+        <h1 class="name">Simeon Azeh</h1>
             <!-- Existing dashboard content goes here -->
-            <div class="page-content schedule_con">
-              <div class="row_main_6">
-                <div class="box">
-                    <div class="sam">
-                        <i class="ri-recycle-fill"></i>
-                        <div class="sam_test">
-                            <h3>Total Recycled</h3>
-                            <h1>1200 Kg</h1>
-                            <p>This year</p>
+            <div class="page-content">
+                <div class="notifications">
+                    <header>
+                        <h1>Notifications</h1>
+                        <a href="#">View all notifications</a>
+                    </header>
+                    <div class="notification-card" data-unread="true">
+                        <i class="ri-calendar-event-line"></i>
+                        <div class="notification-content">
+                            <h4>Upcoming Waste Collection</h4>
+                            <p>Your next waste collection is scheduled for June 15, 2024.</p>
+                            <div class="notification-time">2 hours ago</div>
+                        </div>
+                        <span class="unread-badge">New</span>
+                    </div>
+                    <div class="notification-card" data-unread="false">
+                        <i class="ri-award-line"></i>
+                        <div class="notification-content">
+                            <h4>Achievement Unlocked!</h4>
+                            <p>Congratulations! You've recycled 100 kg of waste. Keep up the great work!</p>
+                            <div class="notification-time">2 days ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-card" data-unread="false">
+                        <i class="ri-leaf-line"></i>
+                        <div class="notification-content">
+                            <h4>Environmental Impact Update</h4>
+                            <p>This month, you've reduced CO2 emissions by 20 kg and saved 2 trees.</p>
+                            <div class="notification-time">1 week ago</div>
+                        </div>
+                    </div>
+                    <div class="notification-card" data-unread="true">
+                        <i class="ri-lightbulb-line"></i>
+                        <div class="notification-content">
+                            <h4>Recycling Tip</h4>
+                            <p>Did you know? You can recycle old electronics by bringing them to designated e-waste collection centers.</p>
+                            <div class="notification-time">1 week ago</div>
+                        </div>
+                        <span class="unread-badge">New</span>
+                    </div>
+                    <div class="notification-card" data-unread="false">
+                        <i class="ri-community-line"></i>
+                        <div class="notification-content">
+                            <h4>Community Event</h4>
+                            <p>Join us for a community clean-up drive on June 20, 2024. Let's make our neighborhood cleaner together!</p>
+                            <div class="notification-time">1 week ago</div>
                         </div>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="sam">
-                        <i class="ri-speed-up-line"></i>
-                        <div class="sam_test">
-                            <h3>Recycling Rate</h3>
-                            <h1>85%</h1>
-                            <p>Overall</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="sam">
-                        <i class="ri-delete-bin-6-line"></i>
-                        <div class="sam_test">
-                            <h3>Waste Collected</h3>
-                            <h1>505 Kg</h1>
-                            <p>Last 6 Months</p>
-                        </div>
-                    </div>
-                </div>
-              </div>
+             
               <div class="environemntal_impact">
                 <h3>Environmental Impact</h3>
                 <div class="e_text">
@@ -162,61 +179,10 @@
                    <button>Get Rewards <i class="ri-medal-line"></i></button>
               </div>
                 </div>
+                </div>
+               
 
-                <div class="detailed-breakdown">
-                    <h3>Detailed Breakdown</h3>
-                    <table>
-                        <tr>
-                            <th>Date</th>
-                            <th>Material</th>
-                            <th>Quantity</th>
-                            <th>Weight</th>
-                        </tr>
-                        <tr>
-                            <td>01/01/2024</td>
-                            <td>Plastic</td>
-                            <td>10 items</td>
-                            <td>5 kg</td>
-                        </tr>
-                        <tr>
-                            <td>01/05/2024</td>
-                            <td>Paper</td>
-                            <td>20 items</td>
-                            <td>7 kg</td>
-                        </tr>
-                        <tr>
-                            <td>01/10/2024</td>
-                            <td>Glass</td>
-                            <td>15 items</td>
-                            <td>8 kg</td>
-                        </tr>
-                    </table>
-                    <button class="see_more">See More <i class="ri-arrow-right-s-line"></i></button>
-                </div>
-
-                <div class="user-goals">
-                    <h3>Your Goals and Achievements</h3>
-                    <p>Set Goal: Reduce plastic waste by 20%</p>
-                    <div class="progress-pie-chart" data-percent="46">
-                        <div class="ppc-progress">
-                          <div class="ppc-progress-fill"></div>
-                        </div>
-                        <div class="ppc-percents">
-                          <div class="pcc-percents-wrapper">
-                            <span>%</span>
-                          </div>
-                        </div>
-                      </div>
-                      <p class="ppc-label">Total Recycled: 1200 kg | Your progress</p>
-                </div>
-                <div class="container_info">
-                    <div class="rectangle">
-                        <div class="notification-text">
-                            <i class="ri-information-2-line"></i>
-                            <span>&nbsp;&nbsp;More information will appear here.</span>
-                        </div>
-                    </div>
-                </div>
+            
             <div class="bottom_space">
               
             </div>

@@ -2105,3 +2105,85 @@ th, td {
 		opacity: .8;
 	}
 }
+
+.notifications {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.notifications header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px
+}
+
+.notifications header h1 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.notifications header a {
+  color: var(--sub-primary);
+  text-decoration: none;
+}
+
+.notification-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+.notification-card:hover {
+  transform: scale(1.03);
+}
+.notification-content {
+  transition: .3s ease;
+  transform: translateX(0);
+}
+.notification-card:hover .notification-content {
+  transform: translateX(20px);
+} 
+
+.notification-card i {
+  font-size: 25px;
+  color: var(--sub-primary);
+  margin-right: 20px;
+}
+
+.notification-content h4 {
+  margin: 0 0 5px 0;
+  font-size: 1em;
+  color: var(--secondary-color);
+}
+
+.notification-content p {
+  margin: 0;
+  color: #666;
+}
+.notification-card[data-unread="true"] {
+  border-left: 5px solid var(--sub-primary);
+}
+.notification-time {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+ 
+}
+
+.unread-badge {
+  background-color: var(--sub-primary);
+  color: white;
+ 
+ padding: 5px;
+ border-radius: 4px;
+  font-size: 12px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
