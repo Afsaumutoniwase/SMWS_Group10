@@ -72,14 +72,14 @@
                         </div>
                     </li>
                     <!-- Waste Collection Schedule -->
-                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Waste Collection Schedule" onclick="window.location.href='../templates/wcshedule.html'">
+                    <li class="c-menu__item" data-toggle="tooltip" title="Waste Collection Schedule" onclick="window.location.href='../templates/wcshedule.html'">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-calendar-alt"></i>
                             <div class="c-menu-item__title"><span>Waste Collection Schedule</span></div>
                         </div>
                     </li>
                     <!-- Recycling Tracker -->
-                    <li class="c-menu__item" data-toggle="tooltip" title="Recycling Tracker" onclick="window.location.href='../templates/rectracker.html'">
+                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Recycling Tracker">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-recycle"></i>
                             <div class="c-menu-item__title"><span>Recycling Tracker</span></div>
@@ -110,87 +110,117 @@
     
       <section id="dashboard" class="content-section active">
         <h1 class="page-title">Simeon Azeh,</h1>
-        <h1 class="name">You can now effectively schedule your waste collection here.</h1>
+        <h1 class="name">Amazing job on keeping earth healthy.</h1>
             <!-- Existing dashboard content goes here -->
             <div class="page-content schedule_con">
-              <div class="row_main">
-                <div class="schedule_container">
-               
-                  <h2>Monthly waste pickups</h2>
-                  <div id='calendar'></div>
-  
-              </div>
-              <div class="col">
-                <div class="card_not">
-                  <p class="time-text"><span>09:30</span><span class="time-sub-text">PM</span></p>
-                  <p class="day-text">Wednesday, June 19th</p>
-                  <p class="day-text"><i class="ri-information-2-fill"></i> upcoming waste collection</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" stroke-width="0" fill="currentColor" stroke="currentColor" class="moon"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path><path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></svg>
-                  </div>
-                  <div class="current_bin">
-                    <div class="notification">
-                      <div class="notiglow"></div>
-                      <div class="notiborderglow"></div>
-                      <div class="notititle">Your selected Bin</div>
-                      <div class="notibody">Bin 4023, Location X
-                        <button>Change <i class="ri-settings-3-line"></i></button>
-                      </div>
-                     
+              <div class="row_main_6">
+                <div class="box">
+                    <div class="sam">
+                        <i class="ri-recycle-fill"></i>
+                        <div class="sam_test">
+                            <h3>Total Recycled</h3>
+                            <h1>1200 Kg</h1>
+                            <p>This year</p>
+                        </div>
                     </div>
-                  </div>
-                 
-                  
-              </div>
-
-              <div class="waste-instructions">
-                <h2>Waste Separation Instructions</h2>
-                <div class="instructions">
-                    <div class="instruction">
-                        <h3>General Waste</h3>
-                        <p>Place in black bins. Includes non-recyclable and non-organic waste.</p>
-                    </div>
-                    <div class="instruction">
-                        <h3>Recyclables</h3>
-                        <p>Place in blue bins. Includes paper, plastics, and metals.</p>
-                    </div>
-                    <div class="instruction">
-                        <h3>Organic Waste</h3>
-                        <p>Place in green bins. Includes food scraps and yard waste.</p>
-                    </div>
-                    <button>FAQs</button>
                 </div>
-            </div>
-            <div class="floating-form" id="floatingForm">
-              <div class="form-header">
-                  <h2>Schedule Waste Collection</h2>
-                 
+                <div class="box">
+                    <div class="sam">
+                        <i class="ri-speed-up-line"></i>
+                        <div class="sam_test">
+                            <h3>Recycling Rate</h3>
+                            <h1>85%</h1>
+                            <p>Overall</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="sam">
+                        <i class="ri-delete-bin-6-line"></i>
+                        <div class="sam_test">
+                            <h3>Waste Collected</h3>
+                            <h1>505 Kg</h1>
+                            <p>Last 6 Months</p>
+                        </div>
+                    </div>
+                </div>
               </div>
-              <form id="wasteCollectionForm">
-                  <label for="binType">Select Bin Type:</label>
-                  <select id="binType" name="binType" required>
-                      <option value="">Choose...</option>
-                      <option value="green">Green Bin (Organics)</option>
-                      <option value="blue">Blue Bin (Recyclables)</option>
-                      <option value="black">Black Bin (General Waste)</option>
-                  </select>
-      
-                  <label for="collectionDate">Choose Collection Date:</label>
-                  <input type="date" id="collectionDate" name="collectionDate" required>
-      
-                  <label for="collectionTime">Choose Collection Time:</label>
-                  <input type="time" id="collectionTime" name="collectionTime" required>
-      
-                  <button type="submit">Schedule Collection</button>
-              </form>
-          </div>
+              <div class="environemntal_impact">
+                <h3>Environmental Impact</h3>
+                <div class="e_text">
+                    <p><i class="ri-windy-fill"></i> CO2 Reduced: 50 kg</p>
+                    <p><i class="ri-tree-line"></i> Trees Saved: 5</p>
+                    <p><i class="ri-lightbulb-line"></i> Energy Saved: 200 kWh</p>
+                </div>
+                <div class="row4">
+                    <div class="status">
+                        <h3>Status</h3>
+                       <p>Good <i class="ri-thumb-up-fill"></i></p>
+                  </div>
+                  <div class="status">
+                    <h3>Rewards</h3>
+                   <button>Get Rewards <i class="ri-medal-line"></i></button>
               </div>
-             
+                </div>
+
+                <div class="detailed-breakdown">
+                    <h3>Detailed Breakdown</h3>
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Material</th>
+                            <th>Quantity</th>
+                            <th>Weight</th>
+                        </tr>
+                        <tr>
+                            <td>01/01/2024</td>
+                            <td>Plastic</td>
+                            <td>10 items</td>
+                            <td>5 kg</td>
+                        </tr>
+                        <tr>
+                            <td>01/05/2024</td>
+                            <td>Paper</td>
+                            <td>20 items</td>
+                            <td>7 kg</td>
+                        </tr>
+                        <tr>
+                            <td>01/10/2024</td>
+                            <td>Glass</td>
+                            <td>15 items</td>
+                            <td>8 kg</td>
+                        </tr>
+                    </table>
+                    <button class="see_more">See More <i class="ri-arrow-right-s-line"></i></button>
+                </div>
+
+                <div class="user-goals">
+                    <h3>Your Goals and Achievements</h3>
+                    <p>Set Goal: Reduce plastic waste by 20%</p>
+                    <div class="progress-pie-chart" data-percent="46">
+                        <div class="ppc-progress">
+                          <div class="ppc-progress-fill"></div>
+                        </div>
+                        <div class="ppc-percents">
+                          <div class="pcc-percents-wrapper">
+                            <span>%</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="ppc-label">Total Recycled: 1200 kg | Your progress</p>
+                </div>
+                <div class="container_info">
+                    <div class="rectangle">
+                        <div class="notification-text">
+                            <i class="ri-information-2-line"></i>
+                            <span>&nbsp;&nbsp;More information will appear here.</span>
+                        </div>
+                    </div>
+                </div>
             <div class="bottom_space">
               
             </div>
-            <div class="bottom_space">
-              
-            </div>
+           >
     </section>
     
      
