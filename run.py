@@ -9,6 +9,9 @@ load_dotenv()
 # Load environment variables
 SECRET_KEY = os.getenv('SECRET_KEY')
 DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///smws.db')
+import pymysql
+
+DATABASE_URI = 'mysql+pymysql://Palvis:SmartManagement10@Palviss-MacBook-Pro.local:3306/Group10'
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
@@ -16,109 +19,109 @@ db = SQLAlchemy(app)
 app.template_folder = 'app/templates'
 app.static_folder = 'app/static'
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(20), unique=True, nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(60), nullable=False)
-    posts = db.relationship('Post', backref='author', lazy=True)
-    schedule = db.relationship('Schedule', backref='responsible_user', lazy=True)
-    recycling_Transactions = db.relationship('Recycling_Transactions', backref='user_id', lazy=True)
+# class User(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     username = db.Column(db.String(20), unique=True, nullable=False)
+#     email = db.Column(db.String(120), unique=True, nullable=False)
+#     password = db.Column(db.String(60), nullable=False)
+#     posts = db.relationship('Post', backref='author', lazy=True)
+#     schedule = db.relationship('Schedule', backref='responsible_user', lazy=True)
+#     recycling_Transactions = db.relationship('Recycling_Transactions', backref='user_id', lazy=True)
     
-    def __repr__(self):
-        return f"User('{self.username}', '{self.email}')"
+#     def __repr__(self):
+#         return f"User('{self.username}', '{self.email}')"
 
-class Roles(db.Model):
-    role_id = db.Column(db.Integer, primary_key=True)
-    role_name = db.Column(db.String(20), unique=True, nullable=False)
-    description = db.Column(db.Text, nullable=False)
+# class Roles(db.Model):
+#     role_id = db.Column(db.Integer, primary_key=True)
+#     role_name = db.Column(db.String(20), unique=True, nullable=False)
+#     description = db.Column(db.Text, nullable=False)
     
-    def __repr__(self):
-        return f"Roles('{self.role_name}', '{self.description}')"   
+#     def __repr__(self):
+#         return f"Roles('{self.role_name}', '{self.description}')"   
 
-class Waste_Bins(db.Model):
-    bin_id = db.Column(db.Integer, primary_key=True)
-    location = db.Column(db.String(120), unique=True, nullable=False)
-    capacity = db.Column(db.Integer, primary_key=True)
-    current_level = db.Column(db.Integer, primary_key=True)
-    last_collected = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    bin_type_id = db.Column(db.Integer, db.ForeignKey('Bin_Types.bin_type_id'), nullable=False)
-    Schedule = db.relationship('Waste_Bins', backref='bin_id', lazy=True)
-    Collected_Waste = db.relationship('Waste_Bins', backref='bin_id', lazy=True)
+# class Waste_Bins(db.Model):
+#     bin_id = db.Column(db.Integer, primary_key=True)
+#     location = db.Column(db.String(120), unique=True, nullable=False)
+#     capacity = db.Column(db.Integer, primary_key=True)
+#     current_level = db.Column(db.Integer, primary_key=True)
+#     last_collected = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+#     bin_type_id = db.Column(db.Integer, db.ForeignKey('Bin_Types.bin_type_id'), nullable=False)
+#     Schedule = db.relationship('Waste_Bins', backref='bin_id', lazy=True)
+#     Collected_Waste = db.relationship('Waste_Bins', backref='bin_id', lazy=True)
     
     
-    def __repr__(self):
-        return f"Waste_Bins('{self.bin_id}', '{self.location}', '{self.current_level}')"
+#     def __repr__(self):
+#         return f"Waste_Bins('{self.bin_id}', '{self.location}', '{self.current_level}')"
     
-class Bin_Types(db.Model):
-    bin_type_id = db.Column(db.Integer, primary_key=True)
-    type_name = db.Column(db.String(20), unique=True, nullable=False)
-    description = db.Column(db.Text, nullable=False)
-    Waste_Bins = db.relationship('Waste_Bins', backref='bin_type', lazy=True)
+# class Bin_Types(db.Model):
+#     bin_type_id = db.Column(db.Integer, primary_key=True)
+#     type_name = db.Column(db.String(20), unique=True, nullable=False)
+#     description = db.Column(db.Text, nullable=False)
+#     Waste_Bins = db.relationship('Waste_Bins', backref='bin_type', lazy=True)
     
-    def __repr__(self):
-        return f"Bin_Types('{self.type_name}', '{self.description}')"
+#     def __repr__(self):
+#         return f"Bin_Types('{self.type_name}', '{self.description}')"
     
-    class Schedule(db.Model):
-        id = db.Column(db.Integer, primary_key=True)
-        bin_id = db.Column(db.Integer, db.ForeignKey('Waste_Bins.bin_id'), nullable=False)
-        collection_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-        collection_frequency = db.Column(db.String(120), unique=True, nullable=False)
-        collection_status = db.Column(db.String(120), unique=True, nullable=False)
-        responsible_user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+#     class Schedule(db.Model):
+#         id = db.Column(db.Integer, primary_key=True)
+#         bin_id = db.Column(db.Integer, db.ForeignKey('Waste_Bins.bin_id'), nullable=False)
+#         collection_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+#         collection_frequency = db.Column(db.String(120), unique=True, nullable=False)
+#         collection_status = db.Column(db.String(120), unique=True, nullable=False)
+#         responsible_user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     
-        def __repr__(self):
-            return f"Schedule('{self.bin_id}', '{self.collection_date}')"
+#         def __repr__(self):
+#             return f"Schedule('{self.bin_id}', '{self.collection_date}')"
 
-class Collected_Waste(db.Model):
-        collection_id = db.Column(db.Integer, primary_key=True)
-        bin_id = db.Column(db.Integer, db.ForeignKey('Waste_Bins.bin_id'), nullable=False)
-        collection_by_user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-        collection_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-        weight = db.Column(db.Integer, primary_key=True)
-        notes = db.Column(db.Text, nullable=False)
+# class Collected_Waste(db.Model):
+#         collection_id = db.Column(db.Integer, primary_key=True)
+#         bin_id = db.Column(db.Integer, db.ForeignKey('Waste_Bins.bin_id'), nullable=False)
+#         collection_by_user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+#         collection_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+#         weight = db.Column(db.Integer, primary_key=True)
+#         notes = db.Column(db.Text, nullable=False)
     
-        def __repr__(self):
-            return f"Collected_Waste('{self.collection_id}', '{self.collection_by_user_id}')"
+#         def __repr__(self):
+#             return f"Collected_Waste('{self.collection_id}', '{self.collection_by_user_id}')"
 
-class Recycling_Centers(db.Model):
-        center_id = db.Column(db.Integer, primary_key=True)
-        location = db.Column(db.String(120), unique=True, nullable=False)
-        contact_info = db.Column(db.String(120), unique=True, nullable=False)
-        operating_hours = db.Column(db.String(120), unique=True, nullable=False)
+# class Recycling_Centers(db.Model):
+#         center_id = db.Column(db.Integer, primary_key=True)
+#         location = db.Column(db.String(120), unique=True, nullable=False)
+#         contact_info = db.Column(db.String(120), unique=True, nullable=False)
+#         operating_hours = db.Column(db.String(120), unique=True, nullable=False)
         
-        def __repr__(self):
-            return f"Recycling_Centers('{self.center_id}', '{self.location}')"
+#         def __repr__(self):
+#             return f"Recycling_Centers('{self.center_id}', '{self.location}')"
 
-class Recycled_Materials(db.Model):
-        material_id = db.Column(db.Integer, primary_key=True)
-        material_name = db.Column(db.String(120), unique=True, nullable=False)
-        description = db.Column(db.Text, nullable=False)
-        recycling_Transactions = db.relationship('Recycling_Transactions', backref='material_id', lazy=True)
+# class Recycled_Materials(db.Model):
+#         material_id = db.Column(db.Integer, primary_key=True)
+#         material_name = db.Column(db.String(120), unique=True, nullable=False)
+#         description = db.Column(db.Text, nullable=False)
+#         recycling_Transactions = db.relationship('Recycling_Transactions', backref='material_id', lazy=True)
         
-        def __repr__(self):
-            return f"Recycled_Materials('{self.material_id}', '{self.material_name}')"
+#         def __repr__(self):
+#             return f"Recycled_Materials('{self.material_id}', '{self.material_name}')"
 
-class Recycling_Transactions(db.Model):
-        transaction_id = db.Column(db.Integer, primary_key=True)
-        user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-        material_id = db.Column(db.Integer, db.ForeignKey('Recycled_Materials.id'), nullable=False)
-        quantity = db.Column(db.String(120), unique=True, nullable=False)
-        transaction_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-        note = db.Column(db.Text, nullable=False)
+# class Recycling_Transactions(db.Model):
+#         transaction_id = db.Column(db.Integer, primary_key=True)
+#         user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+#         material_id = db.Column(db.Integer, db.ForeignKey('Recycled_Materials.id'), nullable=False)
+#         quantity = db.Column(db.String(120), unique=True, nullable=False)
+#         transaction_date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+#         note = db.Column(db.Text, nullable=False)
         
-        def __repr__(self):
-            return f"Recycling_Transactions('{self.transaction_id_id}', '{self.user_id}', '{self.transaction_date}')"
+#         def __repr__(self):
+#             return f"Recycling_Transactions('{self.transaction_id_id}', '{self.user_id}', '{self.transaction_date}')"
 
-class Posts(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    content = db.Column(db.Text, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+# class Posts(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     title = db.Column(db.String(100), nullable=False)
+#     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+#     content = db.Column(db.Text, nullable=False)
+#     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
-    def __repr__(self):
-        return f"Post('{self.title}', '{self.date_posted}')"
+#     def __repr__(self):
+#         return f"Post('{self.title}', '{self.date_posted}')"
 
 @app.route('/')
 def index():
