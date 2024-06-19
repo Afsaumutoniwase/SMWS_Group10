@@ -92,7 +92,7 @@ html, body {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
-  background-image: url("/assets/waste--bg.jpg");
+  background-image: url("../assets/waste--bg.jpg");
 
 }
 .form-structor .signup {

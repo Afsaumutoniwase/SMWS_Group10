@@ -379,7 +379,7 @@ Hero section */
 .hero {
   height: 60vh;
   padding: 20px 80px;
-  background: url(/assets/home-electronic-banner.webp);
+  background: url(../assets/home-electronic-banner.webp);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -625,7 +625,6 @@ transition: all 0.3s ease 0s;
 
 /* section 4 starts */
 .section4 {
-  background-image: url('assets/bg1.jpg');
   background-position: right;
   top: 0px;
   background-repeat: no-repeat;
@@ -1338,7 +1337,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .waste-hero {
   position: relative;
-    background: url('/assets/smart-waste-management-solutions-solid-color-background_964851-81531.avif') no-repeat center center/cover;
+    background: url('../assets/smart-waste-management-solutions-solid-color-background_964851-81531.avif') no-repeat center center/cover;
     padding: 100px 0;
     text-align: center;
     color: #fff;
@@ -2539,7 +2538,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .waste-hero2 {
-  background: url('/assets/waste-pcikup.jpg');
+  background: url('../assets/waste-pcikup.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -2813,7 +2812,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .waste-hero5 {
-  background: url('/assets/waste--bg.jpg');
+  background: url('../assets/waste--bg.jpg');
 }
 
 
