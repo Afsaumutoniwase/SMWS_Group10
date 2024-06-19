@@ -16,36 +16,39 @@ app.template_folder = 'app/templates'
 app.static_folder = 'app/static'
 
 
-@app.route('/index.html')
+@app.route('/')
 def index():
     return render_template('index.html')
 
+@app.route('/templates/index.html')
+def home():
+    return render_template('index.html')
 
-@app.route('/authentication/getstarted.html')
+@app.route('/templates/authentication/getstarted.html')
 def login():
     return render_template('authentication/getstarted.html')
 
-@app.route('/authentication/getstarted.html')
+@app.route('/templates/authentication/getstarted.html')
 def signup():
     return render_template('authentication/getstarted.html')
 
-@app.route('/nav/services.html')
+@app.route('/templates/nav/services.html')
 def services():
     return render_template('nav/services.html')
 
-@app.route('/nav/services/wastepickup.html')
+@app.route('/templates/nav/services/wastepickup.html')
 def wastepickup():
     return render_template('nav/services/wastepickup.html')
 
-@app.route('/nav/services/smartwm.html')
+@app.route('/templates/nav/services/smartwm.html')
 def smartwm():
     return render_template('nav/services/smartwm.html')
 
-@app.route('/nav/about.html')
+@app.route('/templates/nav/about.html')
 def about():
     return render_template('nav/about.html')
 
-@app.route('/nav/contact.html')
+@app.route('/templates/nav/contact.html')
 def contact():
     return render_template('nav/contact.html')
 
