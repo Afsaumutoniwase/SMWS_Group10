@@ -51,7 +51,7 @@ class Waste_Bins(db.Model):
         return f"Waste_Bins('{self.bin_id}', '{self.location}', '{self.current_level}')"
     
 class Bin_Types(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    bin_type_id = db.Column(db.Integer, primary_key=True)
     type_name = db.Column(db.String(20), unique=True, nullable=False)
     description = db.Column(db.Text, nullable=False)
     Waste_Bins = db.relationship('Waste_Bins', backref='bin_type', lazy=True)
