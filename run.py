@@ -42,7 +42,7 @@ class Waste_Bins(db.Model):
     capacity = db.Column(db.Integer, primary_key=True)
     current_level = db.Column(db.Integer, primary_key=True)
     last_collected = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    bin_type_id = db.Column(db.Integer, db.ForeignKey('bin_types.id'), nullable=False)
+    bin_type_id = db.Column(db.Integer, db.ForeignKey('bin_types.bin_type_id'), nullable=False)
     Schedule = db.relationship('Waste_Bins', backref='bin_id', lazy=True)
     Collected_Waste = db.relationship('Waste_Bins', backref='bin_id', lazy=True)
     
