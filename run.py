@@ -11,7 +11,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///smws.db')
 
 app = Flask(__name__)
-
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
+db = SQLAlchemy(app)
 app.template_folder = 'app/templates'
 app.static_folder = 'app/static'
 
@@ -156,4 +157,7 @@ def contact():
     return render_template('nav/contact.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    with app.app_context():    
+        db.create_all()
+        print("Database tables created successfully.")
+        app.run(debug=True)
