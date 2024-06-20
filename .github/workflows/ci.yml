@@ -1,60 +1,38 @@
-name: CI/CD to Heroku
+name: Deploy to Heroku
 
 on:
   push:
     branches:
-      - main
-  pull_request:
+      - main  # or the branch you want to deploy
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
-
-    - name: Install dependencies
-      run: |
-        python -m venv venv
-        . venv/bin/activate
-        pip install -r requirements.txt
-
-    # Uncomment if you have tests to run
-    # - name: Run tests
-    #   run: |
-    #     . venv/bin/activate
-    #     pytest
-
   deploy:
-    needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.12'
 
-    - name: Install dependencies
-      run: |
-        python -m venv venv
-        . venv/bin/activate
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Deploy to Heroku
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: |
-        . venv/bin/activate
-        git remote add heroku https://git.heroku.com/swms.git
-        git push heroku main
+      - name: Run tests
+        run: |
+          # If you have tests, run them here
+          echo "No tests to run"
+
+      - name: Deploy to Heroku
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+          echo "$HEROKU_API_KEY" | heroku auth:token
+          git remote add heroku https://git.heroku.com/${{ secrets.HEROKU_APP_NAME }}.git
+          git push heroku main
