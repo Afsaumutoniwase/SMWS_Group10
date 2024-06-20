@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager
+import sys
+sys.path.append("../..")
 from config import config
 
 db = SQLAlchemy()

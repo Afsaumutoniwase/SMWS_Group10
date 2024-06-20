@@ -3,6 +3,13 @@ from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 from datetime import datetime
 import os
+import sys
+sys.path.append("app")
+from app.routes.auth import auth_bp
+from app import db
+
+
+
 
 
 load_dotenv()
@@ -16,6 +23,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 db = SQLAlchemy(app)
 app.template_folder = 'app/templates'
 app.static_folder = 'app/static'
+app.register_blueprint(auth_bp)
+print(app.url_map)
 
 # # class User(db.Model):
 # #     id = db.Column(db.Integer, primary_key=True)
@@ -167,4 +176,5 @@ if __name__ == "__main__":
     # with app.app_context():    
     #     db.create_all()
     #     print("Database tables created successfully.")
+    
     app.run(debug=True)
