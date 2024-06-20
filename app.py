@@ -169,7 +169,7 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/login')
+@app.route('/authentication/getstarted.html')
 def login():
     # if request.method == 'POST':
     #     user_email = request.form.get('email')
@@ -191,12 +191,12 @@ def login():
     return render_template('authentication/getstarted.html')
 
 
-@app.route('/sign-up')
+@app.route('/authentication/getstarted.html')
 def signup():
     return render_template('authentication/getstarted.html')
 
 
-@app.route('/register')
+@app.route('/authentication/getstarted.html')
 def register():
     # if request.method == 'POST':
     #     user_name = request.form.get('name')
@@ -232,22 +232,22 @@ def wastepickup():
     return render_template('nav/services/wastepickup.html')
 
 
-@app.route('/smart_waste_management')
+@app.route('/nav/services/smartwm.html')
 def smartwm():
     return render_template('nav/services/smartwm.html')
 
 
-@app.route('/about_us')
+@app.route('/nav/about.html')
 def about():
     return render_template('nav/about.html')
 
 
-@app.route('/contact_us')
+@app.route('/nav/contact.html')
 def contact():
     return render_template('nav/contact.html')
 
 
-@app.route('/waste_collection_schedule')
+@app.route('/nav/services/wcs.html')
 def wcs():
     return render_template('wcs.html')
 
