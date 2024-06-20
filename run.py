@@ -1,10 +1,9 @@
 from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
-from flask_admin import Admin
 from dotenv import load_dotenv
 from datetime import datetime
 import os
-from flask_admin.contrib.sqla import ModelView
+
 
 load_dotenv()
 
