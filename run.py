@@ -11,7 +11,7 @@ load_dotenv()
 
 # Load environment variables
 SECRET_KEY = os.getenv('SECRET_KEY', 'inYiT9ipJ$TAT')
-DATABASE_URL = os.getenv('DATABASE_URI', 'sqlite:///instance/smws.db')
+DATABASE_URL = 'postgresql://postgres:banaju20@localhost:5432/smws'
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
@@ -22,6 +22,7 @@ app.template_folder = 'app/templates'
 app.static_folder = 'app/static'
 
 class User(db.Model):
+    __tablename__ = 'user'
     name = db.Column(db.String(20), primary_key=True, unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
