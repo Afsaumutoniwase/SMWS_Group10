@@ -191,6 +191,9 @@ def notifications():
 def dashboard():
     return render_template('dashboard.html')
 
+@app.route('/templates/settings.html')
+def settings():
+    return render_template('settings.html')
 
 
 
