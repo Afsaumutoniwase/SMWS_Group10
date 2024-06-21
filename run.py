@@ -171,6 +171,29 @@ def contact():
     return render_template('nav/contact.html')
 
 
+
+
+@app.route('/templates/wcs.html')
+def wcs():
+    return render_template('wcs.html')
+
+
+@app.route('/templates/rectracker.html')
+def rectracker():
+    return render_template('rectracker.html')
+#
+@app.route('/templates/notifications.html')
+def notifications():
+    return render_template('notifications.html')
+#
+#
+@app.route('/templates/dashboard.html')
+def dashboard():
+    return render_template('dashboard.html')
+
+
+
+
 if __name__ == "__main__":
     # if not os.path.exists('instance'):
     #     os.makedirs('instance')
