@@ -1,9 +1,5 @@
-from flask import Flask, render_template, request, url_for, redirect, flash, send_from_directory
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-from sqlalchemy import Integer, String
-from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 from dotenv import load_dotenv
 from datetime import datetime
 import os
@@ -11,49 +7,15 @@ import os
 load_dotenv()
 
 # Load environment variables
-# SECRET_KEY = os.getenv('SECRET_KEY')
-# DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///smws.db')
+SECRET_KEY = os.getenv('SECRET_KEY')
+DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///smws.db')
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret-key-goes-here'
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
+db = SQLAlchemy(app)
+app.template_folder = 'app/templates'
+app.static_folder = 'app/static'
 
-
-class Base(DeclarativeBase):
-    pass
-
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-db = SQLAlchemy(model_class=Base)
-db.init_app(app)
-
-login_manager = LoginManager()
-login_manager.init_app(app)
-
-
-@login_manager.user_loader
-def load_user(user_id):
-    result = db.session.execute(db.select(User).where(User.id == int(user_id)))
-    user = result.scalar()
-    return user
-
-
-class User(UserMixin, db.Model):
-    id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    name: Mapped[str] = mapped_column(String(1000))
-    email: Mapped[str] = mapped_column(String(100), unique=True)
-    password: Mapped[str] = mapped_column(String(100))
-    address: Mapped[str] = mapped_column(String(1000))
-    phone_number: Mapped[int] = mapped_column(Integer)
-
-
-with app.app_context():
-    db.create_all()
-
-
-# app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
-# db = SQLAlchemy(app)
-# app.template_folder = 'app/templates'
-# app.static_folder = 'app/static'
 
 # # class User(db.Model):
 # #     id = db.Column(db.Integer, primary_key=True)
@@ -164,115 +126,55 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/home')
+@app.route('/templates/index.html')
 def home():
     return render_template('index.html')
 
 
-@app.route('/authentication/getstarted.html')
+@app.route('/templates/authentication/getstarted.html')
 def login():
-    # if request.method == 'POST':
-    #     user_email = request.form.get('email')
-    #     user_password = request.form.get('password')
-    #
-    #     result = db.session.execute(db.select(User).where(User.email == user_email))
-    #     user = result.scalar()
-    #
-    #     if not user:
-    #         flash("That email does not exist, please try again.")
-    #         return redirect(url_for('login'))
-    #     elif not check_password_hash(user.password, user_password):
-    #         flash('Password incorrect, please try again.')
-    #         return redirect(url_for('login'))
-    #     else:
-    #         login_user(user)
-    #         return redirect(url_for('home'))
-
     return render_template('authentication/getstarted.html')
 
 
-@app.route('/authentication/getstarted.html')
+@app.route('/templates/authentication/getstarted.html')
 def signup():
     return render_template('authentication/getstarted.html')
 
 
-@app.route('/authentication/getstarted.html')
+@app.route('/templates/authentication/getstarted.html')
 def register():
-    # if request.method == 'POST':
-    #     user_name = request.form.get('name')
-    #     user_email = request.form.get('email')
-    #     user_password = request.form.get('password')
-    #     confirm_password = request.form.get('confirm_password')
-    #
-    #     if user_password != confirm_password:
-    #         flash("Passwords do not match, please try again.")
-    #         return redirect(url_for('register'))
-    #
-    #     existing_user = User.query.filter_by(email=user_email).first()
-    #     if existing_user:
-    #         flash("Email already registered, please log in.")
-    #         return redirect(url_for('login'))
-    #
-    #     hashed_password = generate_password_hash(user_password, method='sha256')
-    #     new_user = User(name=user_name, email=user_email, password=hashed_password)
-    #     db.session.add(new_user)
-    #     db.session.commit()
-    #     flash('Registration successful! Please log in.')
-    #     return redirect(url_for('login'))
     return render_template('authentication/getstarted.html')
 
 
-@app.route('/services')
+@app.route('/templates/nav/services.html')
 def services():
     return render_template('nav/services.html')
 
 
-@app.route('/waste_pickip')
+@app.route('/templates/nav/services/wastepickup.html')
 def wastepickup():
     return render_template('nav/services/wastepickup.html')
 
 
-@app.route('/nav/services/smartwm.html')
+@app.route('/templates/nav/services/smartwm.html')
 def smartwm():
     return render_template('nav/services/smartwm.html')
 
 
-@app.route('/nav/about.html')
+@app.route('/templates/nav/about.html')
 def about():
     return render_template('nav/about.html')
 
 
-@app.route('/nav/contact.html')
+@app.route('/templates/nav/contact.html')
 def contact():
     return render_template('nav/contact.html')
-
-
-@app.route('/nav/services/wcs.html')
-def wcs():
-    return render_template('wcs.html')
-
-
-@app.route('/recycling_tracker/<num>')
-def rec_tracker(num):
-    return render_template('rectracker.html')
-
-
-@app.route("/notifications")
-def notify():
-    return render_template('notifications.html')
-
-
-@app.route("/dashboard/<num>")
-def dashboard(num):
-    return render_template('dashboard.html')
 
 
 if __name__ == "__main__":
     # if not os.path.exists('instance'):
     #     os.makedirs('instance')
-    #
     # with app.app_context():
     #     db.create_all()
     #     print("Database tables created successfully.")
-
-    app.run(debug=True, host='127.0.0.1', port=8000)
+    app.run(debug=True)

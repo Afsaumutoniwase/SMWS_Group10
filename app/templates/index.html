@@ -30,38 +30,37 @@
               </div>
             </div>
           </div>
-          
+
     </div>
     <div class="content">
         <header>
             <div class="navbar">
                 <div class="logo">
-                    <a href="{{ url_for('home') }}"><h1>Smart<span>pro</span></h1></a>
+                    <a href="../templates/index.html"><h1>Smart<span>pro</span></h1></a>
                 </div>
                 <div class="navlinks">
                     <ul>
-                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="../templates/index.html">Home</a></li>
                         <li><a href="#">Services <i class="ri-arrow-down-s-line"></i></a>
                             <ul class="dropdown slide-top">
-                                <li><a href="{{ url_for('smartwm') }}"><i class="ri-recycle-line"></i> Smart waste management</a></li>
-                                <li><a href="{{ url_for('wastepickup') }}"><i class="ri-truck-line"></i> Waste pickup</a></li>
+                                <li><a href="./nav/services/smartwm.html"><i class="ri-recycle-line"></i> Smart waste management</a></li>
+                                <li><a href="./nav/services/wastepickup.html"><i class="ri-truck-line"></i> Waste pickup</a></li>
                             </ul>
                         </li>
-                       
-                        <li><a href="{{ url_for('about') }}">About</a></li>
-                        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+
+                        <li><a href="./nav/about.html">About</a></li>
+                        <li><a href="./nav/contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="nav_buttons">
-                    <button onclick="window.location.href='{{ url_for('login') }}'">Login</button>
-                    <button onclick="window.location.href='{{ url_for('login') }}'">Sign Up</button>
+                    <button onclick="window.location.href='./authentication/getstarted.html'">Login</button>
+                    <button onclick="window.location.href='./authentication/getstarted.html'">Sign up</button>
 
-                  
                 </div>
             </div>
             <i class="ri-menu-3-line" id="mobile_menu"></i>
         </header>
-       
+
         <div class="mobile_nav_menu slide-left">
             <i class="ri-close-line" id="mobile_menu_close"></i> <!-- Icon to close mobile menu -->
             <ul>
@@ -72,21 +71,21 @@
                         <li><a href="./nav/services/wastepickup.html"><i class="ri-truck-line"></i> Waste pickup</a></li>
                     </ul>
                 </li>
-               
+
                 <li><a href="./nav/about.html">About</a></li>
                 <li><a href="./nav/contact.html">Contact Us</a></li>
             </ul>
             <div class="mobile_nav_buttons">
                 <button onclick="window.location.href='/authentication/getstarted.html'">Login</button>
                 <button onclick="window.location.href='/authentication/getstarted.html'">Sign up</button>
-              
+
             </div>
         </div>
         <div class="hero">
            <div class="container">
             <div class="text_container">
                 <h1>A smarter & reliable way to manage waste</h1>
-                <a href="{{ url_for('register') }}">Register
+                <a href="./authentication/getstarted.html">Register
                     <lord-icon
     src="https://cdn.lordicon.com/vduvxizq.json"
     trigger="loop"
@@ -98,10 +97,10 @@
                 </a>
             </div>
            </div>
-         
+
         </div>
-         
-    
+
+
         <div class="services">
             <div class="pb-5 pt-5" id="services">
                 <div class="container">
@@ -117,10 +116,10 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="row">
                         <div class="col-lg-3 col-sm-6">
-                            <a href="{{ url_for('wcs') }}" class="services-small-item active">
+                            <a href="wcs.html" class="services-small-item active">
                                 <div class="icon">
                                     <i class="fa-solid fa-calendar-alt"></i>
                                 </div>
@@ -133,7 +132,7 @@
                             <div class="item-bg"></div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
-                            <a href="{{ url_for('rec_tracker', num=1) }}" class="services-small-item">
+                            <a href="./rectracker.html" class="services-small-item">
                                 <div class="icon">
                                     <i class="fa-solid fa-recycle"></i>
                                 </div>
@@ -146,7 +145,7 @@
                             <div class="item-bg"></div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
-                            <a href="{{  url_for('rec_tracker', num=2) }}" class="services-small-item">
+                            <a href="./rectracker.html" class="services-small-item">
                                 <div class="icon">
                                     <i class="fas fa-chart-line"></i>
                                 </div>
@@ -159,7 +158,7 @@
                             <div class="item-bg"></div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
-                            <a href="{{  url_for('notify') }}" class="services-small-item">
+                            <a href="./notifications.html" class="services-small-item">
                                 <div class="icon">
                                     <i class="fa-solid fa-bell"></i>
                                 </div>
@@ -172,7 +171,7 @@
                             <div class="item-bg"></div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
-                            <a href="{{ url_for('dashboard' , num=1) }}" class="services-small-item">
+                            <a href="./dashboard.html" class="services-small-item">
                                 <div class="icon">
                                     <i class="fa-solid fa-map-marked-alt"></i>
                                 </div>
@@ -185,7 +184,7 @@
                             <div class="item-bg"></div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
-                            <a href="{{ url_for('contact') }}" class="services-small-item">
+                            <a href="./nav/contact.html" class="services-small-item">
                                 <div class="icon">
                                     <i class="fa-solid fa-headset"></i>
                                 </div>
@@ -198,7 +197,7 @@
                             <div class="item-bg"></div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
-                            <a href="{{ url_for('dashboard' , num=2) }}" class="services-small-item">
+                            <a href="./dashboard.html" class="services-small-item">
                                 <div class="icon">
                                     <i class="fa-solid fa-user-shield"></i>
                                 </div>
@@ -211,7 +210,7 @@
                             <div class="item-bg"></div>
                         </div>
                         <div class="col-lg-3 col-sm-6">
-                            <a href="{{ url_for('dashboard' , num=3) }}" class="services-small-item">
+                            <a href="./dashboard.html" class="services-small-item">
                                 <div class="icon">
                                     <i class="fa-solid fa-file-alt"></i>
                                 </div>
@@ -227,8 +226,8 @@
                 </div>
             </div>
         </div>
-        
-      
+
+
 
         <div class="sub_section">
             <h2 class="section-title center-title">Waste Categories</h2>
@@ -276,9 +275,9 @@
                     <p>Collection of large items and bulk waste.</p>
                 </div>
             </div>
-            <button onclick="window.location.href = '{{ url_for('wcs') }}'">Schedule Collection <i class="ri-arrow-right-line"></i></button>
+            <button onclick="window.location.href = './wcs.html'">Schedule Collection <i class="ri-arrow-right-line"></i></button>
         </div>
-        
+
         <div class="section4">
             <div class="news-container">
                 <div class="news-card">
@@ -305,7 +304,7 @@
                         <div class="news-meta">
                             <img src="../static/assets/profile.jpg" alt="Author Image 2" class="author-image">
                             <div class="author-info">
-                                <span class="author-name">Afsa Umutoniwase</span>
+                                <span class="author-name">Afsa</span>
                                 <span class="read-time"><i class="ri-bookmark-line"></i> 4 min read</span>
                             </div>
                         </div>
@@ -335,7 +334,7 @@
                         <div class="news-meta">
                             <img src="../static/assets/profile.jpg" alt="Author Image 4" class="author-image">
                             <div class="author-info">
-                                <span class="author-name">Joan Keza</span>
+                                <span class="author-name">Joan</span>
                                 <span class="read-time"><i class="ri-bookmark-line"></i> 5 min read</span>
                             </div>
                         </div>
@@ -350,7 +349,7 @@
                         <div class="news-meta">
                             <img src="../static/assets/profile.jpg" alt="Author Image 5" class="author-image">
                             <div class="author-info">
-                                <span class="author-name">Jeremiah Agbaje</span>
+                                <span class="author-name">Jeremiah</span>
                                 <span class="read-time"><i class="ri-bookmark-line"></i> 5 min read</span>
                             </div>
                         </div>
@@ -358,7 +357,7 @@
                 </div>
             </div>
         </div>
-             
+
 
         <div class="section3">
             <div id="ourclients">
@@ -410,7 +409,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="faqs">
             <div class="container">
                 <h2 class="section-title center-title">Frequently Asked Questions</h2>
@@ -463,7 +462,7 @@
                 </div>
             </div>
         </div>
-        
+
 
         <div class="membership">
             <div class="container">
@@ -472,12 +471,12 @@
                     <p>Join our Smart Waste Management System today! Members can enjoy benefits such as personalized collection schedules, real-time notifications, and access to detailed waste management reports.</p>
                 </div>
                 <div class="nav_button">
-                    <button onclick="window.location.href='{{ url_for('login') }}'">Login <i class="ri-arrow-right-up-line"></i></button>
-                    <button class="reg" onclick="window.location.href='{{ url_for('register') }}'">Register <i class="ri-arrow-right-up-line"></i></button>
+                    <button onclick="window.location.href='./authentication/getstarted.html'">Login <i class="ri-arrow-right-up-line"></i></button>
+                    <button class="reg" onclick="window.location.href='./authentication/getstarted.html'">Register <i class="ri-arrow-right-up-line"></i></button>
                 </div>
             </div>
         </div>
-        
+
         <footer class="new_footer_area bg_color">
             <div class="new_footer_top">
                 <div class="container">
@@ -495,21 +494,21 @@
                                 </form>
                             </div>
                         </div>
-        
+
                         <!-- Quick Links -->
                         <div class="col-lg-3 col-md-6">
                             <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
                                 <h3 class="f-title f_600 t_color f_size_18">Quick Links</h3>
                                 <ul class="list-unstyled f_list">
-                                    <li><a href="{{ ('home') }}"><i class="fa-solid fa-home"></i> Home</a></li>
-                                    <li><a href="{{ url_for('wcs') }}"><i class="fa-solid fa-recycle"></i> Waste Collection</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-home"></i> Home</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-recycle"></i> Waste Collection</a></li>
                                     <li><a href="#"><i class="fa-solid fa-map"></i> Service Areas</a></li>
-                                    <li><a href="{{ url_for('about') }}"><i class="fa-solid fa-info-circle"></i> About Us</a></li>
-                                    <li><a href="{{ url_for('contact') }}"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-info-circle"></i> About Us</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
-        
+
                         <!-- Services -->
                         <div class="col-lg-3 col-md-6">
                             <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
@@ -518,12 +517,12 @@
                                     <li><a href="#"><i class="fa-solid fa-trash"></i> Residential Waste</a></li>
                                     <li><a href="#"><i class="fa-solid fa-building"></i> Commercial Waste</a></li>
                                     <li><a href="#"><i class="fa-solid fa-recycle"></i> Recycling</a></li>
-                                    <li><a href="{{ url_for('wcs') }}"><i class="fa-solid fa-truck"></i> Waste Collection</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-truck"></i> Waste Collection</a></li>
                                     <li><a href="#"><i class="fa-solid fa-industry"></i> Industrial Waste</a></li>
                                 </ul>
                             </div>
                         </div>
-        
+
                         <!-- Help -->
                         <div class="col-lg-3 col-md-6">
                             <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
@@ -538,7 +537,7 @@
                                 </ul>
                             </div>
                         </div>
-        
+
                         <!-- Language -->
                         <div class="col-lg-3 col-md-6">
                             <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
@@ -551,7 +550,7 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <!-- Social Media -->
                         <div class="col-lg-3 col-md-6">
                             <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
@@ -581,13 +580,13 @@
                 </div>
             </div>
         </footer>
-        
-        
+
+
     </div>
-    
-    
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
 <script src="../static/js/index.js"></script>
