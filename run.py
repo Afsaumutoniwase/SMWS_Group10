@@ -11,10 +11,10 @@ load_dotenv()
 
 # Load environment variables
 SECRET_KEY = os.getenv('SECRET_KEY', 'inYiT9ipJ$TAT')
-DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///instance/smws.db')
+DATABASE_URL = os.getenv('DATABASE_URI', 'sqlite:///instance/smws.db')
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SECRET_KEY'] = SECRET_KEY
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
