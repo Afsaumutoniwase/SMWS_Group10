@@ -1111,12 +1111,12 @@
 }
 
 
-.legend {
+.legend2 {
   margin-top: 5px;
 }
 
 
-.legend h2 {
+.legend2 h2 {
   font-size: 1.2em;
   margin-bottom: 10px;
 }
@@ -1126,14 +1126,14 @@
   flex-direction: column;
 }
 
-.legend ul {
+.legend2 ul {
   display: flex;
   flex-direction: row;
   list-style: none;
   padding: 0;
 }
 
-.legend li {
+.legend2 li {
   display: flex;
   align-items: center;
   margin-right: 15px;

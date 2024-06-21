@@ -290,9 +290,69 @@
     .select_language select {
         margin-top: 15px;
     }
-  
 
+    .hero .text_container h1 {
+        font-size: 56px;
+        
+    }
+
+    .hero .text_container {
+        width: 100%;
+        margin-left: -60px;
+    }
+  
+    .hero {
+        padding: 20px;
+    }
+
+    #features .features-content {
+        flex-direction: column;
+       
+    }
+    .feature_container {
+      padding: 20px;
+    } 
    
+    .page-content .column_container {
+       flex-direction: column;
+    } 
+    #dashboard > div > div.graph_dis#dashboard > div > div.graph_dis {
+        height: 300px !important;
+    }
+    .column_container2 {
+       flex-direction: column;
+    } 
+    .col2 {
+        flex-direction: row;
+    }
+    .legend2 ul {
+      padding: 20px;
+    } 
+    .box_eco {
+       
+    }
+    .summary {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .bottom_spaceMobile {
+        padding-bottom: 80px;
+    }
+    .row_main {
+        flex-direction: column !important;
+    }
+    .floating-form {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .row_main_6 {
+        flex-direction: column;
+    }
+    .row_main_6 .box {
+       width: 100%;
+       margin-top: 20px;
+    }
     
 }
 
@@ -473,5 +533,21 @@
         margin-top: 0 !important;
         margin: 0 auto !important;
     }
+
+    .hero .text_container  {
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .hero .text_container h1 {
+        font-size: 40px;
+    } 
+    body > div.content > footer > div.new_footer_top > div > div > div:nth-child(6) > div > div {
+        text-align: center;
+    }
+    .user-goals {
+        margin-top: 120px;
+    } 
    
 }
