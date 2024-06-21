@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, request, flash, session,redir
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 from dotenv import load_dotenv
-from werkzeug.security import generate_password_hash, check_password_hash
+from flask_migrate import Migrate
 import os
 
 load_dotenv()
@@ -14,9 +14,12 @@ DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///smws.db')
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config['SECRET_KEY'] = SECRET_KEY
+env = os.getenv('FLASK_ENV', 'development')
 db = SQLAlchemy(app)
 app.template_folder = 'app/templates'
 app.static_folder = 'app/static'
+migrate = Migrate(app, db)
+
 
 class User(db.Model):
     name = db.Column(db.String(20), primary_key=True, unique=True, nullable=False)
