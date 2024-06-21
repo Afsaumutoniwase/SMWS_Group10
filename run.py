@@ -4,6 +4,8 @@ from sqlalchemy.exc import IntegrityError
 from dotenv import load_dotenv
 from werkzeug.security import generate_password_hash, check_password_hash
 import os
+from flask_migrate import Migrate
+
 
 load_dotenv()
 
@@ -15,6 +17,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config['SECRET_KEY'] = SECRET_KEY
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 app.template_folder = 'app/templates'
 app.static_folder = 'app/static'
 
