@@ -9,7 +9,7 @@ load_dotenv()
 
 # Load environment variables
 SECRET_KEY = os.getenv('SECRET_KEY', 'inYiT9ipJ$TAT')
-DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///smws.db')
+DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///instance/smws.db')
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
