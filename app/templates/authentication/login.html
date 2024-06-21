@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started</title>
+    <title>Log in</title>
     <link rel="stylesheet" href="../../static/css/reg.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
         integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
@@ -18,27 +18,21 @@
     <div class="loader"></div>
     <div class="content">
         <div class="form-structor">
-            <form method="post" action="{{ url_for('enter') }}">
+            <form method="post" action="{{ url_for('signin') }}">
                 <div class="signup">
-                    <h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+                    <h2 class="form-title" id="signup"><span>or</span>Sign in</h2>
                     <div class="form-holder">
-                        <input type="text" class="input" placeholder="Name" name="name" />
                         <input type="email" class="input" placeholder="Email" name="email" />
                         <input type="password" class="input" placeholder="Password" name="password" />
-                        <input type="text" class="input" placeholder="Address" name="address"/>
-                        <input type="text" class="input" placeholder="Phone Number" name="phone_number" />
                         <div class="terms">
                             <input type="checkbox" id="terms" name="terms">
                             <label for="terms"> I agree to the <a href="#">terms and conditions</a></label>
                         </div>
                     </div>
-                    <button class="submit-btn">ENTER</button>
-                    <label class="terms"> If you already have an account <a href="login.html">Log in</a></label>
-                </div>
-            
-            </form>
+                    <button class="submit-btn">Log into account</button>
+                    <label class="terms"> If you don't have an account <a href="getstarted.html">Sign Up</a></label>
+                </div></form>
             <div class="login slide-up">
-                <button class="submit-btn">Or Log in</button>
                 <div class="center">
                     <h2 class="form-title" id="login"><span></span></h2>
                     <div class="form-holder">
@@ -46,7 +40,7 @@
                 </div>
             </div>
         </div>
-
+        
         <footer>
             <p>© 2025 Smartpro. All rights reserved.</p>
         </footer>
