@@ -9,16 +9,14 @@ load_dotenv()
 
 # Load environment variables
 SECRET_KEY = os.getenv('SECRET_KEY', 'inYiT9ipJ$TAT')
-DATABASE_URI = os.getenv('DATABASE_URI', 'sqlite:///smws.db')
+DATABASE_URL = os.getenv('DATABASE_URL', 'postgres://uda25i3d6lpegg:p68bb482fbb1bf5a5605460e7eaeca21f05aeb9a5d0d2743e0547f78992275c4d@cd1goc44htrmfn.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d5qnp2d18je3dt')
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
+app.config['SQLALCHEMY_DATABASE_URL'] = DATABASE_URL
 app.config['SECRET_KEY'] = SECRET_KEY
-env = os.getenv('FLASK_ENV', 'development')
 db = SQLAlchemy(app)
 app.template_folder = 'app/templates'
 app.static_folder = 'app/static'
-migrate = Migrate(app, db)
 
 
 class User(db.Model):
