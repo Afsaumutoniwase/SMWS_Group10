@@ -11,10 +11,10 @@ load_dotenv()
 
 # Load environment variables
 SECRET_KEY = os.getenv('SECRET_KEY', 'inYiT9ipJ$TAT')
-DATABASE_URL = 'postgresql://postgres:banaju20@192.168.1.66:5432/smws'
+DATABASE_URL = 'postgresql://afsa:GqzEcACTX1VuRIL0fWfF8VBFF8S2Zr2y@dpg-cpr1oojv2p9s739vran0-a.oregon-postgres.render.com/smws'
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', DATABASE_URL)
 app.config['SECRET_KEY'] = SECRET_KEY
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
@@ -162,7 +162,7 @@ def signin():
             return redirect(url_for('dashboard'))
         else:
             return render_template('/templates/authentication/login.html',error='Invalid credentials')
-    return render_template('/templates/authentication/login.html')
+    return render_template('authentication/login.html')
 @app.route('/templates/dashboard.html')
 def dashboard():
     username = session.get('name', None)
