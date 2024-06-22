@@ -13,5 +13,6 @@ bandit==1.7.0
 python-dotenv
 Werkzeug==2.1.1
 gunicorn
+wrapt==1.14.1
 psycopg2-binary
 Flask-SQLAlchemy==2.5.1
