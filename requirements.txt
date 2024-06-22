@@ -8,11 +8,12 @@ PyMySQL==1.0.2
 pytest==6.2.4
 coverage==5.5
 black==21.7b0
-pylint==2.11.1
+pylint
 bandit==1.7.0
 python-dotenv
 Werkzeug==2.1.1
 gunicorn
-wrapt==1.14.1
+wrapt
+astroid
 psycopg2-binary
 Flask-SQLAlchemy==2.5.1
