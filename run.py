@@ -11,7 +11,7 @@ load_dotenv()
 
 # Load environment variables
 SECRET_KEY = os.getenv('SECRET_KEY', 'inYiT9ipJ$TAT')
-DATABASE_URL = 'postgresql://postgres:banaju20@localhost:5432/smws'
+DATABASE_URL = 'postgresql://postgres:banaju20@192.168.1.66:5432/smws'
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
